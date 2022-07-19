@@ -13,6 +13,8 @@
     "format": "prettier --write \"**/@(src|e2e)/**/*.ts\"",
     "release": "yarn --cwd projects/ngx-ol release"
   },
+  "main": "dist/ngx-ol/bundles/ngx-ol.umd.js",
+  "typings": "dist/ngx-ol/ngx-ol.d.ts",
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.0",
