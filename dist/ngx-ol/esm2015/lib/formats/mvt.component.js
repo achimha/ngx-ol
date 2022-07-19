@@ -1,0 +1,32 @@
+var FormatMVTComponent_1;
+import { __decorate } from "tslib";
+import { Component, forwardRef, Input } from '@angular/core';
+import { FormatComponent } from './format.component';
+import { MVT } from 'ol/format';
+let FormatMVTComponent = FormatMVTComponent_1 = class FormatMVTComponent extends FormatComponent {
+    constructor() {
+        super();
+        this.instance = new MVT(this);
+    }
+};
+__decorate([
+    Input()
+], FormatMVTComponent.prototype, "featureClass", void 0);
+__decorate([
+    Input()
+], FormatMVTComponent.prototype, "geometryName", void 0);
+__decorate([
+    Input()
+], FormatMVTComponent.prototype, "layerName", void 0);
+__decorate([
+    Input()
+], FormatMVTComponent.prototype, "layers", void 0);
+FormatMVTComponent = FormatMVTComponent_1 = __decorate([
+    Component({
+        selector: 'aol-format-mvt',
+        template: '',
+        providers: [{ provide: FormatComponent, useExisting: forwardRef(() => FormatMVTComponent_1) }]
+    })
+], FormatMVTComponent);
+export { FormatMVTComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibXZ0LmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25neC1vbC8iLCJzb3VyY2VzIjpbImxpYi9mb3JtYXRzL212dC5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLFVBQVUsRUFBRSxLQUFLLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFDN0QsT0FBTyxFQUFFLGVBQWUsRUFBRSxNQUFNLG9CQUFvQixDQUFDO0FBQ3JELE9BQU8sRUFBRSxHQUFHLEVBQUUsTUFBTSxXQUFXLENBQUM7QUFTaEMsSUFBYSxrQkFBa0IsMEJBQS9CLE1BQWEsa0JBQW1CLFNBQVEsZUFBZTtJQWNyRDtRQUNFLEtBQUssRUFBRSxDQUFDO1FBQ1IsSUFBSSxDQUFDLFFBQVEsR0FBRyxJQUFJLEdBQUcsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUNoQyxDQUFDO0NBQ0YsQ0FBQTtBQWRDO0lBREMsS0FBSyxFQUFFO3dEQUdtRztBQUUzRztJQURDLEtBQUssRUFBRTt3REFDYTtBQUVyQjtJQURDLEtBQUssRUFBRTtxREFDVTtBQUVsQjtJQURDLEtBQUssRUFBRTtrREFDUztBQVpOLGtCQUFrQjtJQUw5QixTQUFTLENBQUM7UUFDVCxRQUFRLEVBQUUsZ0JBQWdCO1FBQzFCLFFBQVEsRUFBRSxFQUFFO1FBQ1osU0FBUyxFQUFFLENBQUMsRUFBRSxPQUFPLEVBQUUsZUFBZSxFQUFFLFdBQVcsRUFBRSxVQUFVLENBQUMsR0FBRyxFQUFFLENBQUMsb0JBQWtCLENBQUMsRUFBRSxDQUFDO0tBQzdGLENBQUM7R0FDVyxrQkFBa0IsQ0FrQjlCO1NBbEJZLGtCQUFrQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgZm9yd2FyZFJlZiwgSW5wdXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IEZvcm1hdENvbXBvbmVudCB9IGZyb20gJy4vZm9ybWF0LmNvbXBvbmVudCc7XG5pbXBvcnQgeyBNVlQgfSBmcm9tICdvbC9mb3JtYXQnO1xuaW1wb3J0IHsgR2VvbWV0cnkgfSBmcm9tICdvbC9nZW9tJztcbmltcG9ydCBHZW9tZXRyeVR5cGUgZnJvbSAnb2wvZ2VvbS9HZW9tZXRyeVR5cGUnO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdhb2wtZm9ybWF0LW12dCcsXG4gIHRlbXBsYXRlOiAnJyxcbiAgcHJvdmlkZXJzOiBbeyBwcm92aWRlOiBGb3JtYXRDb21wb25lbnQsIHVzZUV4aXN0aW5nOiBmb3J3YXJkUmVmKCgpID0+IEZvcm1hdE1WVENvbXBvbmVudCkgfV0sXG59KVxuZXhwb3J0IGNsYXNzIEZvcm1hdE1WVENvbXBvbmVudCBleHRlbmRzIEZvcm1hdENvbXBvbmVudCB7XG4gIGluc3RhbmNlOiBNVlQ7XG5cbiAgQElucHV0KClcbiAgZmVhdHVyZUNsYXNzOlxuICAgIHwgKChnZW9tOiBHZW9tZXRyeSB8IHsgW2s6IHN0cmluZ106IGFueSB9KSA9PiBhbnkpXG4gICAgfCAoKGdlb206IEdlb21ldHJ5VHlwZSwgYXJnMjogbnVtYmVyW10sIGFyZzM6IG51bWJlcltdIHwgbnVtYmVyW11bXSwgYXJnNDogeyBbazogc3RyaW5nXTogYW55IH0pID0+IGFueSk7XG4gIEBJbnB1dCgpXG4gIGdlb21ldHJ5TmFtZTogc3RyaW5nO1xuICBASW5wdXQoKVxuICBsYXllck5hbWU6IHN0cmluZztcbiAgQElucHV0KClcbiAgbGF5ZXJzOiBzdHJpbmdbXTtcblxuICBjb25zdHJ1Y3RvcigpIHtcbiAgICBzdXBlcigpO1xuICAgIHRoaXMuaW5zdGFuY2UgPSBuZXcgTVZUKHRoaXMpO1xuICB9XG59XG4iXX0=

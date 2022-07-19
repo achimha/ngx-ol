@@ -1,0 +1,36 @@
+import { __decorate } from "tslib";
+import { Component, Input } from '@angular/core';
+import { DragAndDrop } from 'ol/interaction';
+import { MapComponent } from '../map.component';
+let DragAndDropInteractionComponent = class DragAndDropInteractionComponent {
+    constructor(map) {
+        this.map = map;
+    }
+    ngOnInit() {
+        this.instance = new DragAndDrop(this);
+        this.map.instance.addInteraction(this.instance);
+    }
+    ngOnDestroy() {
+        this.map.instance.removeInteraction(this.instance);
+    }
+};
+DragAndDropInteractionComponent.ctorParameters = () => [
+    { type: MapComponent }
+];
+__decorate([
+    Input()
+], DragAndDropInteractionComponent.prototype, "formatConstructors", void 0);
+__decorate([
+    Input()
+], DragAndDropInteractionComponent.prototype, "projection", void 0);
+__decorate([
+    Input()
+], DragAndDropInteractionComponent.prototype, "target", void 0);
+DragAndDropInteractionComponent = __decorate([
+    Component({
+        selector: 'aol-interaction-draganddrop',
+        template: ''
+    })
+], DragAndDropInteractionComponent);
+export { DragAndDropInteractionComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZHJhZ2FuZGRyb3AuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmd4LW9sLyIsInNvdXJjZXMiOlsibGliL2ludGVyYWN0aW9ucy9kcmFnYW5kZHJvcC5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLE9BQU8sRUFBRSxTQUFTLEVBQUUsS0FBSyxFQUFxQixNQUFNLGVBQWUsQ0FBQztBQUNwRSxPQUFPLEVBQUUsV0FBVyxFQUFFLE1BQU0sZ0JBQWdCLENBQUM7QUFFN0MsT0FBTyxFQUFFLFlBQVksRUFBRSxNQUFNLGtCQUFrQixDQUFDO0FBT2hELElBQWEsK0JBQStCLEdBQTVDLE1BQWEsK0JBQStCO0lBVTFDLFlBQW9CLEdBQWlCO1FBQWpCLFFBQUcsR0FBSCxHQUFHLENBQWM7SUFBRyxDQUFDO0lBRXpDLFFBQVE7UUFDTixJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksV0FBVyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ3RDLElBQUksQ0FBQyxHQUFHLENBQUMsUUFBUSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLENBQUM7SUFDbEQsQ0FBQztJQUVELFdBQVc7UUFDVCxJQUFJLENBQUMsR0FBRyxDQUFDLFFBQVEsQ0FBQyxpQkFBaUIsQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLENBQUM7SUFDckQsQ0FBQztDQUNGLENBQUE7O1lBVjBCLFlBQVk7O0FBTnJDO0lBREMsS0FBSyxFQUFFOzJFQUNvQztBQUU1QztJQURDLEtBQUssRUFBRTttRUFDbUI7QUFFM0I7SUFEQyxLQUFLLEVBQUU7K0RBQ1E7QUFSTCwrQkFBK0I7SUFKM0MsU0FBUyxDQUFDO1FBQ1QsUUFBUSxFQUFFLDZCQUE2QjtRQUN2QyxRQUFRLEVBQUUsRUFBRTtLQUNiLENBQUM7R0FDVywrQkFBK0IsQ0FvQjNDO1NBcEJZLCtCQUErQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgSW5wdXQsIE9uRGVzdHJveSwgT25Jbml0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBEcmFnQW5kRHJvcCB9IGZyb20gJ29sL2ludGVyYWN0aW9uJztcbmltcG9ydCBGZWF0dXJlIGZyb20gJ29sL2Zvcm1hdC9GZWF0dXJlJztcbmltcG9ydCB7IE1hcENvbXBvbmVudCB9IGZyb20gJy4uL21hcC5jb21wb25lbnQnO1xuaW1wb3J0IHsgUHJvamVjdGlvbkxpa2UgfSBmcm9tICdvbC9wcm9qJztcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnYW9sLWludGVyYWN0aW9uLWRyYWdhbmRkcm9wJyxcbiAgdGVtcGxhdGU6ICcnLFxufSlcbmV4cG9ydCBjbGFzcyBEcmFnQW5kRHJvcEludGVyYWN0aW9uQ29tcG9uZW50IGltcGxlbWVudHMgT25Jbml0LCBPbkRlc3Ryb3kge1xuICBpbnN0YW5jZTogRHJhZ0FuZERyb3A7XG5cbiAgQElucHV0KClcbiAgZm9ybWF0Q29uc3RydWN0b3JzOiAoKG46IEZlYXR1cmUpID0+IGFueSlbXTtcbiAgQElucHV0KClcbiAgcHJvamVjdGlvbjogUHJvamVjdGlvbkxpa2U7XG4gIEBJbnB1dCgpXG4gIHRhcmdldDogRWxlbWVudDtcblxuICBjb25zdHJ1Y3Rvcihwcml2YXRlIG1hcDogTWFwQ29tcG9uZW50KSB7fVxuXG4gIG5nT25Jbml0KCkge1xuICAgIHRoaXMuaW5zdGFuY2UgPSBuZXcgRHJhZ0FuZERyb3AodGhpcyk7XG4gICAgdGhpcy5tYXAuaW5zdGFuY2UuYWRkSW50ZXJhY3Rpb24odGhpcy5pbnN0YW5jZSk7XG4gIH1cblxuICBuZ09uRGVzdHJveSgpIHtcbiAgICB0aGlzLm1hcC5pbnN0YW5jZS5yZW1vdmVJbnRlcmFjdGlvbih0aGlzLmluc3RhbmNlKTtcbiAgfVxufVxuIl19

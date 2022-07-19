@@ -1,0 +1,16 @@
+import { __decorate } from "tslib";
+import { Input } from '@angular/core';
+export class SimpleGeometryComponent {
+    constructor(map, host) {
+        this.map = map;
+        this.host = host;
+        this.componentType = 'simple-geometry';
+    }
+    ngOnInit() {
+        this.host.instance.setGeometry(this.instance);
+    }
+}
+__decorate([
+    Input()
+], SimpleGeometryComponent.prototype, "srid", void 0);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2ltcGxlZ2VvbWV0cnkuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmd4LW9sLyIsInNvdXJjZXMiOlsibGliL2dlb20vc2ltcGxlZ2VvbWV0cnkuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsS0FBSyxFQUFVLE1BQU0sZUFBZSxDQUFDO0FBSzlDLE1BQU0sT0FBZ0IsdUJBQXVCO0lBTTNDLFlBQXNCLEdBQWlCLEVBQVksSUFBc0I7UUFBbkQsUUFBRyxHQUFILEdBQUcsQ0FBYztRQUFZLFNBQUksR0FBSixJQUFJLENBQWtCO1FBSmxFLGtCQUFhLEdBQUcsaUJBQWlCLENBQUM7SUFJbUMsQ0FBQztJQUU3RSxRQUFRO1FBQ04sSUFBSSxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUNoRCxDQUFDO0NBQ0Y7QUFQVTtJQUFSLEtBQUssRUFBRTtxREFBYyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IElucHV0LCBPbkluaXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IEZlYXR1cmVDb21wb25lbnQgfSBmcm9tICcuLi9mZWF0dXJlLmNvbXBvbmVudCc7XG5pbXBvcnQgeyBNYXBDb21wb25lbnQgfSBmcm9tICcuLi9tYXAuY29tcG9uZW50JztcbmltcG9ydCBTaW1wbGVHZW9tZXRyeSBmcm9tICdvbC9nZW9tL1NpbXBsZUdlb21ldHJ5JztcblxuZXhwb3J0IGFic3RyYWN0IGNsYXNzIFNpbXBsZUdlb21ldHJ5Q29tcG9uZW50IGltcGxlbWVudHMgT25Jbml0IHtcbiAgcHVibGljIGluc3RhbmNlOiBTaW1wbGVHZW9tZXRyeTtcbiAgcHVibGljIGNvbXBvbmVudFR5cGUgPSAnc2ltcGxlLWdlb21ldHJ5JztcblxuICBASW5wdXQoKSBzcmlkOiBzdHJpbmc7XG5cbiAgY29uc3RydWN0b3IocHJvdGVjdGVkIG1hcDogTWFwQ29tcG9uZW50LCBwcm90ZWN0ZWQgaG9zdDogRmVhdHVyZUNvbXBvbmVudCkge31cblxuICBuZ09uSW5pdCgpIHtcbiAgICB0aGlzLmhvc3QuaW5zdGFuY2Uuc2V0R2VvbWV0cnkodGhpcy5pbnN0YW5jZSk7XG4gIH1cbn1cbiJdfQ==
