@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { SourceUTFGridComponent, ViewComponent } from 'ngx-openlayers';
+import { SourceUTFGridComponent, ViewComponent } from 'ngx-ol';
 
 @Component({
   selector: 'app-root',

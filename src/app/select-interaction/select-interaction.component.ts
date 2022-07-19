@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Layer as OlLayer } from 'ol/layer';
-import { LayerVectorComponent } from '../../../projects/ngx-openlayers/src/lib/layers/layervector.component';
+import { LayerVectorComponent } from '../../../projects/ngx-ol/src/lib/layers/layervector.component';
 import { SelectEvent } from 'ol/interaction/Select';
 
 @Component({

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "demo-ngx-openlayers": {
+    "demo-ngx-ol": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -37,7 +37,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/demo-ngx-openlayers",
+            "outputPath": "dist/demo-ngx-ol",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -81,18 +81,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "demo-ngx-openlayers:build"
+            "browserTarget": "demo-ngx-ol:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "demo-ngx-openlayers:build:production"
+              "browserTarget": "demo-ngx-ol:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo-ngx-openlayers:build"
+            "browserTarget": "demo-ngx-ol:build"
           }
         },
         "test": {
@@ -118,7 +118,7 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "e2e/tsconfig.json",
+              "e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**",
@@ -132,53 +132,56 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "demo-ngx-openlayers:serve"
+            "devServerTarget": "demo-ngx-ol:serve"
           }
         }
       }
     },
-    "ngx-openlayers": {
+    "ngx-ol": {
       "projectType": "library",
-      "root": "projects/ngx-openlayers",
-      "sourceRoot": "projects/ngx-openlayers/src",
+      "root": "projects/ngx-ol",
+      "sourceRoot": "projects/ngx-ol/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ngx-openlayers/tsconfig.lib.json",
-            "project": "projects/ngx-openlayers/ng-package.json"
+            "tsConfig": "projects/ngx-ol/tsconfig.lib.json",
+            "project": "projects/ngx-ol/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-openlayers/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-ol/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-openlayers/src/test.ts",
-            "tsConfig": "projects/ngx-openlayers/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-openlayers/karma.conf.js"
+            "main": "projects/ngx-ol/src/test.ts",
+            "tsConfig": "projects/ngx-ol/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-ol/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-openlayers/tsconfig.lib.json",
-              "projects/ngx-openlayers/tsconfig.spec.json"
+              "projects/ngx-ol/tsconfig.lib.json",
+              "projects/ngx-ol/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ],
-            "tslintConfig": "projects/ngx-openlayers/tslint-prettier.json",
+            "tslintConfig": "projects/ngx-ol/tslint-prettier.json",
             "typeCheck": true
           }
         }
       }
     }
   },
-  "defaultProject": "demo-ngx-openlayers"
+  "defaultProject": "demo-ngx-ol",
+  "cli": {
+    "analytics": "a1ba2ba4-fd62-417a-8ca8-785de9590bd6"
+  }
 }

@@ -19,8 +19,8 @@
       "dom"
     ],
     "paths": {
-      "ngx-openlayers": [
-        "dist/ngx-openlayers"
+      "ngx-ol": [
+        "dist/ngx-ol"
       ]
     }
   },

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MapComponent, ViewComponent } from 'ngx-openlayers';
+import { MapComponent, ViewComponent } from 'ngx-ol';
 
 @Component({
   selector: 'app-side-by-side',

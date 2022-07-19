@@ -1,17 +1,17 @@
 {
-  "name": "demo-ngx-openlayers",
+  "name": "demo-ngx-ol",
   "version": "1.0.0-next.0",
   "scripts": {
     "ng": "ng",
     "start": "yarn build:lib && ng serve",
-    "build:lib": "ng build ngx-openlayers --prod",
-    "build:demo": "ng build demo-ngx-openlayers",
+    "build:lib": "ng build ngx-ol --prod",
+    "build:demo": "ng build demo-ngx-ol",
     "build": "yarn build:lib && yarn build:demo",
     "test": "yarn build:lib && ng test",
     "lint": "ng lint",
     "e2e": "yarn build:lib && ng e2e",
     "format": "prettier --write \"**/@(src|e2e)/**/*.ts\"",
-    "release": "yarn --cwd projects/ngx-openlayers release"
+    "release": "yarn --cwd projects/ngx-ol release"
   },
   "private": true,
   "dependencies": {

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule, HammerModule } from '@angular/platform-browser';
-import { AngularOpenlayersModule } from 'ngx-openlayers';
+import { AngularOpenlayersModule } from 'ngx-ol';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';

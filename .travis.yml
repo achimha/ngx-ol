@@ -9,7 +9,7 @@ cache:
   yarn: true
   directories:
   - node_modules
-  - projects/ngx-openlayers/node_modules
+  - projects/ngx-ol/node_modules
   - dist
 
 jobs:
@@ -23,8 +23,8 @@ jobs:
     name: next lib and demo
     script:
     - yarn build:lib
-    - cp -r dist/ngx-openlayers dist/ngx-openlayers-publish
-    - yarn build:demo --base-href "/ngx-openlayers/"  --progress false
+    - cp -r dist/ngx-ol dist/ngx-ol-publish
+    - yarn build:demo --base-href "/ngx-ol/"  --progress false
 
   - stage: release
     name: next lib version on github releases
