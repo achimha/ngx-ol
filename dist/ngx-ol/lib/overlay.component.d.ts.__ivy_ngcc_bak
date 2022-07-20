@@ -1,17 +1,16 @@
 import { OnDestroy, OnInit } from '@angular/core';
 import { MapComponent } from './map.component';
-import { Overlay, PanOptions } from 'ol';
+import Overlay, { PanOptions, Positioning } from 'ol/Overlay';
 import { ContentComponent } from './content.component';
-import OverlayPositioning from 'ol/OverlayPositioning';
 export declare class OverlayComponent implements OnInit, OnDestroy {
     private map;
     componentType: string;
     instance: Overlay;
-    element: Element;
+    element: HTMLElement;
     content: ContentComponent;
     id: number | string;
     offset: number[];
-    positioning: OverlayPositioning | string;
+    positioning: Positioning;
     stopEvent: boolean;
     insertFirst: boolean;
     autoPan: boolean;

@@ -6,7 +6,7 @@ export declare class ControlComponent implements OnInit, OnDestroy {
     private map;
     componentType: string;
     instance: Control;
-    element: Element;
+    element: HTMLElement;
     content: ContentComponent;
     constructor(map: MapComponent);
     ngOnInit(): void;

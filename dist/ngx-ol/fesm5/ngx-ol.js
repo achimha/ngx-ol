@@ -2,16 +2,17 @@ import { __decorate, __extends, __param } from 'tslib';
 import { Input, EventEmitter, ElementRef, Output, Component, SkipSelf, Optional, Host, ContentChild, forwardRef, ContentChildren, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import View from 'ol/View';
-import Map from 'ol/Map';
-import { Graticule, VectorTile as VectorTile$1, Feature, Overlay } from 'ol';
+import { Map, Graticule, Feature } from 'ol';
 import { Group, Image, Tile, Vector, VectorTile } from 'ol/layer';
-import { XYZ, OSM, BingMaps, Vector as Vector$1, Cluster, WMTS as WMTS$1, TileWMS, TileJSON, ImageStatic, ImageWMS, ImageArcGISRest, Raster, UTFGrid } from 'ol/source';
+import { XYZ, OSM, BingMaps, Vector as Vector$1, Cluster, WMTS as WMTS$1, VectorTile as VectorTile$1, TileWMS, TileJSON, ImageStatic, ImageWMS, Raster, UTFGrid } from 'ol/source';
 import { createXYZ } from 'ol/tilegrid';
 import TileGrid from 'ol/tilegrid/TileGrid';
 import WMTS from 'ol/tilegrid/WMTS';
 import { GeoJSON, MVT } from 'ol/format';
+import ImageArcGISRest from 'ol/source/ImageArcGISRest';
 import { Circle, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon } from 'ol/geom';
 import { transform } from 'ol/proj';
+import Overlay from 'ol/Overlay';
 import { Style, Circle as Circle$1, Text, Stroke, Icon, Fill } from 'ol/style';
 import { defaults, Control, Attribution, FullScreen, OverviewMap, Rotate, ScaleLine, Zoom, ZoomSlider, ZoomToExtent } from 'ol/control';
 import MousePosition from 'ol/control/MousePosition';
@@ -87,7 +88,7 @@ var MapComponent = /** @class */ (function () {
         this.instance.on('pointermove', function (event) { return _this.pointerMove.emit(event); });
         this.instance.on('postrender', function (event) { return _this.onpostrender.emit(event); });
         this.instance.on('postrender', function (event) { return _this.postRender.emit(event); });
-        this.instance.on('prerender', function (event) { return _this.onprerender.emit(event); });
+        // TODO this.instance.on('prerender', (event: RenderEvent) => this.onprerender.emit(event));
         this.instance.on('propertychange', function (event) { return _this.propertyChange.emit(event); });
         this.instance.on('singleclick', function (event) { return _this.singleClick.emit(event); });
     };
@@ -190,7 +191,7 @@ var ViewComponent = /** @class */ (function () {
         // console.log('creating ol.View instance with: ', this);
         this.instance = new View(this);
         this.host.instance.setView(this.instance);
-        this.instance.on('change:zoom', function (event) { return _this.changeZoom.emit(event); });
+        // TODO this.instance.on('change:zoom', (event: ObjectEvent) => this.changeZoom.emit(event));
         this.instance.on('change:resolution', function (event) { return _this.changeResolution.emit(event); });
         this.instance.on('change:center', function (event) { return _this.changeCenter.emit(event); });
     };
@@ -2258,9 +2259,6 @@ var StyleCircleComponent = /** @class */ (function () {
     __decorate([
         Input()
     ], StyleCircleComponent.prototype, "stroke", void 0);
-    __decorate([
-        Input()
-    ], StyleCircleComponent.prototype, "atlasManager", void 0);
     StyleCircleComponent = __decorate([
         Component({
             selector: 'aol-style-circle',
@@ -3381,10 +3379,10 @@ var DrawInteractionComponent = /** @class */ (function () {
         var _this = this;
         this.instance = new Draw(this);
         this.instance.on('change', function (event) { return _this.olChange.emit(event); });
-        this.instance.on('change:active', function (event) { return _this.olChangeActive.emit(event); });
+        // TODO this.instance.on('change:active', (event: DrawEvent) => this.olChangeActive.emit(event));
         this.instance.on('drawend', function (event) { return _this.drawEnd.emit(event); });
         this.instance.on('drawstart', function (event) { return _this.drawStart.emit(event); });
-        this.instance.on('propertychange', function (event) { return _this.propertyChange.emit(event); });
+        // TODO this.instance.on('propertychange', (event: DrawEvent) => this.propertyChange.emit(event));
         this.map.instance.addInteraction(this.instance);
     };
     DrawInteractionComponent.prototype.ngOnDestroy = function () {
@@ -3474,7 +3472,7 @@ var SelectInteractionComponent = /** @class */ (function () {
         this.instance = new Select(this);
         this.instance.on('change', function (event) { return _this.olChange.emit(event); });
         this.instance.on('select', function (event) { return _this.olSelect.emit(event); });
-        this.instance.on('propertychange', function (event) { return _this.propertyChange.emit(event); });
+        // TODO this.instance.on('propertychange', (event: SelectEvent) => this.propertyChange.emit(event));
         this.map.instance.addInteraction(this.instance);
     };
     SelectInteractionComponent.prototype.ngOnDestroy = function () {
@@ -3544,8 +3542,8 @@ var ModifyInteractionComponent = /** @class */ (function () {
         var _this = this;
         this.instance = new Modify(this);
         this.instance.on('change', function (event) { return _this.olChange.emit(event); });
-        this.instance.on('change:active', function (event) { return _this.olChangeActive.emit(event); });
-        this.instance.on('propertychange', function (event) { return _this.propertyChange.emit(event); });
+        // TODO this.instance.on('change:active', (event: ModifyEvent) => this.olChangeActive.emit(event));
+        // TODO this.instance.on('propertychange', (event: ModifyEvent) => this.propertyChange.emit(event));
         this.instance.on('modifyend', function (event) { return _this.modifyEnd.emit(event); });
         this.instance.on('modifystart', function (event) { return _this.modifyStart.emit(event); });
         this.map.instance.addInteraction(this.instance);
@@ -3614,7 +3612,7 @@ var TranslateInteractionComponent = /** @class */ (function () {
         var _this = this;
         this.instance = new Translate(this);
         this.instance.on('change', function (event) { return _this.olChange.emit(event); });
-        this.instance.on('propertychange', function (event) { return _this.propertyChange.emit(event); });
+        // TODO this.instance.on('propertychange', (event: TranslateEvent) => this.propertyChange.emit(event));
         this.instance.on('translateend', function (event) { return _this.translateEnd.emit(event); });
         this.instance.on('translatestart', function (event) { return _this.translateStart.emit(event); });
         this.instance.on('translating', function (event) { return _this.translating.emit(event); });
@@ -3664,8 +3662,7 @@ var AttributionComponent = /** @class */ (function () {
         this.elementRef = elementRef;
     }
     AttributionComponent.prototype.ngOnInit = function () {
-        this.html = this.elementRef.nativeElement.innerHTML;
-        this.instance = new Attribution(this);
+        this.label = this.elementRef.nativeElement.innerHTML;
     };
     AttributionComponent.ctorParameters = function () { return [
         { type: ElementRef }
@@ -3686,7 +3683,7 @@ var AttributionsComponent = /** @class */ (function () {
     /* we can do this at the very end */
     AttributionsComponent.prototype.ngAfterViewInit = function () {
         if (this.attributions.length) {
-            this.instance = this.attributions.map(function (cmp) { return cmp.instance; });
+            this.instance = this.attributions.map(function (cmp) { return cmp.label; });
             // console.log('setting attributions:', this.instance);
             this.source.instance.setAttributions(this.instance);
         }

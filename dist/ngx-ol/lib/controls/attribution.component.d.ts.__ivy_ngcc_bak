@@ -6,7 +6,7 @@ export declare class ControlAttributionComponent implements OnInit, OnDestroy {
     private element;
     componentType: string;
     instance: Attribution;
-    target: Element;
+    target: HTMLElement;
     collapsible: boolean;
     constructor(map: MapComponent, element: ElementRef);
     ngOnInit(): void;

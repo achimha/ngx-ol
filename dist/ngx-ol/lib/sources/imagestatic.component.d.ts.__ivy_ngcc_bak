@@ -7,6 +7,7 @@ import { Extent } from 'ol/extent';
 import { AttributionLike } from 'ol/source/Source';
 import { LoadFunction } from 'ol/Image';
 import { Size } from 'ol/size';
+import { ImageSourceEvent } from 'ol/source/Image';
 export declare class SourceImageStaticComponent extends SourceComponent implements OnInit, OnChanges {
     instance: ImageStatic;
     projection: ProjectionLike | string;
@@ -16,9 +17,9 @@ export declare class SourceImageStaticComponent extends SourceComponent implemen
     crossOrigin?: string;
     imageLoadFunction?: LoadFunction;
     imageSize?: Size;
-    imageLoadStart: EventEmitter<any>;
-    imageLoadEnd: EventEmitter<any>;
-    imageLoadError: EventEmitter<any>;
+    imageLoadStart: EventEmitter<ImageSourceEvent>;
+    imageLoadEnd: EventEmitter<ImageSourceEvent>;
+    imageLoadError: EventEmitter<ImageSourceEvent>;
     constructor(layer: LayerImageComponent);
     setLayerSource(): void;
     ngOnInit(): void;

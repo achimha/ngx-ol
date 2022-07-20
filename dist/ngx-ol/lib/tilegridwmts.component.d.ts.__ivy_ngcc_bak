@@ -10,7 +10,7 @@ export declare class TileGridWMTSComponent extends TileGridComponent implements 
     resolutions: number[];
     matrixIds: string[];
     sizes?: Size[];
-    tileSizes?: (number | Size)[];
+    tileSizes?: Size[];
     widths?: number[];
     ngOnInit(): void;
 }

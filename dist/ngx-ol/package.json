@@ -7,7 +7,8 @@
   "peerDependencies": {
     "@angular/common": ">=6.0.0 <=9.x.x",
     "@angular/core": ">=6.0.0 <=9.x.x",
-    "ol": "^6.0.0"
+    "ol": "^6.0.0",
+    "tslib": "^1.10.0"
   },
   "main": "bundles/ngx-ol.umd.js",
   "module": "fesm5/ngx-ol.js",
@@ -21,9 +22,6 @@
   "typings": "ngx-ol.d.ts",
   "metadata": "ngx-ol.metadata.json",
   "sideEffects": false,
-  "dependencies": {
-    "tslib": "^1.10.0"
-  },
   "__processed_by_ivy_ngcc__": {
     "es2015": "9.1.13",
     "fesm2015": "9.1.13",

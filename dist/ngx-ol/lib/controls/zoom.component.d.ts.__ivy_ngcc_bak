@@ -5,8 +5,8 @@ export declare class ControlZoomComponent implements OnInit, OnDestroy {
     private map;
     instance: Zoom;
     duration: number;
-    zoomInLabel: string | Node;
-    zoomOutLabel: string | Node;
+    zoomInLabel: string | HTMLElement;
+    zoomOutLabel: string | HTMLElement;
     zoomInTipLabel: string;
     zoomOutTipLabel: string;
     delta: number;

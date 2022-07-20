@@ -5,12 +5,14 @@ import { SourceComponent } from './source.component';
 import { ProjectionLike } from 'ol/proj';
 import { AttributionLike } from 'ol/source/Source';
 import { LoadFunction } from 'ol/Image';
+import { ImageSourceEvent } from 'ol/source/Image';
+import { ServerType } from 'ol/source/wms';
 export declare class SourceImageWMSComponent extends SourceComponent implements OnChanges, OnInit {
     instance: ImageWMS;
     attributions: AttributionLike;
     crossOrigin: string;
     hidpi: boolean;
-    serverType: string;
+    serverType: ServerType;
     imageLoadFunction?: LoadFunction;
     params: {
         [key: string]: any;
@@ -19,9 +21,9 @@ export declare class SourceImageWMSComponent extends SourceComponent implements 
     ratio: number;
     resolutions: Array<number>;
     url: string;
-    imageLoadStart: EventEmitter<any>;
-    imageLoadEnd: EventEmitter<any>;
-    imageLoadError: EventEmitter<any>;
+    imageLoadStart: EventEmitter<ImageSourceEvent>;
+    imageLoadEnd: EventEmitter<ImageSourceEvent>;
+    imageLoadError: EventEmitter<ImageSourceEvent>;
     constructor(layer: LayerImageComponent);
     ngOnInit(): void;
     ngOnChanges(changes: SimpleChanges): void;

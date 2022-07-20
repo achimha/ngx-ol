@@ -11,7 +11,7 @@ export declare class ControlOverviewMapComponent implements OnInit, OnChanges, O
     collapsible: boolean;
     label: string;
     layers: Layer[];
-    target: Element;
+    target: HTMLElement;
     tipLabel: string;
     view: View;
     constructor(map: MapComponent);

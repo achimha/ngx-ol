@@ -2,16 +2,17 @@ import { __decorate, __param } from 'tslib';
 import { Input, EventEmitter, ElementRef, Output, Component, SkipSelf, Optional, Host, ContentChild, forwardRef, ContentChildren, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import View from 'ol/View';
-import Map from 'ol/Map';
-import { Graticule, VectorTile as VectorTile$1, Feature, Overlay } from 'ol';
+import { Map, Graticule, Feature } from 'ol';
 import { Group, Image, Tile, Vector, VectorTile } from 'ol/layer';
-import { XYZ, OSM, BingMaps, Vector as Vector$1, Cluster, WMTS as WMTS$1, TileWMS, TileJSON, ImageStatic, ImageWMS, ImageArcGISRest, Raster, UTFGrid } from 'ol/source';
+import { XYZ, OSM, BingMaps, Vector as Vector$1, Cluster, WMTS as WMTS$1, VectorTile as VectorTile$1, TileWMS, TileJSON, ImageStatic, ImageWMS, Raster, UTFGrid } from 'ol/source';
 import { createXYZ } from 'ol/tilegrid';
 import TileGrid from 'ol/tilegrid/TileGrid';
 import WMTS from 'ol/tilegrid/WMTS';
 import { GeoJSON, MVT } from 'ol/format';
+import ImageArcGISRest from 'ol/source/ImageArcGISRest';
 import { Circle, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon } from 'ol/geom';
 import { transform } from 'ol/proj';
+import Overlay from 'ol/Overlay';
 import { Style, Circle as Circle$1, Text, Stroke, Icon, Fill } from 'ol/style';
 import { defaults, Control, Attribution, FullScreen, OverviewMap, Rotate, ScaleLine, Zoom, ZoomSlider, ZoomToExtent } from 'ol/control';
 import MousePosition from 'ol/control/MousePosition';
@@ -91,7 +92,7 @@ let MapComponent = class MapComponent {
         this.instance.on('pointermove', (event) => this.pointerMove.emit(event));
         this.instance.on('postrender', (event) => this.onpostrender.emit(event));
         this.instance.on('postrender', (event) => this.postRender.emit(event));
-        this.instance.on('prerender', (event) => this.onprerender.emit(event));
+        // TODO this.instance.on('prerender', (event: RenderEvent) => this.onprerender.emit(event));
         this.instance.on('propertychange', (event) => this.propertyChange.emit(event));
         this.instance.on('singleclick', (event) => this.singleClick.emit(event));
     }
@@ -194,7 +195,7 @@ let ViewComponent = class ViewComponent {
         // console.log('creating ol.View instance with: ', this);
         this.instance = new View(this);
         this.host.instance.setView(this.instance);
-        this.instance.on('change:zoom', (event) => this.changeZoom.emit(event));
+        // TODO this.instance.on('change:zoom', (event: ObjectEvent) => this.changeZoom.emit(event));
         this.instance.on('change:resolution', (event) => this.changeResolution.emit(event));
         this.instance.on('change:center', (event) => this.changeCenter.emit(event));
     }
@@ -2124,7 +2125,7 @@ let StyleCircleComponent = class StyleCircleComponent {
     }
 };
 StyleCircleComponent.ɵfac = function StyleCircleComponent_Factory(t) { return new (t || StyleCircleComponent)(ɵngcc0.ɵɵdirectiveInject(StyleComponent, 1)); };
-StyleCircleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: StyleCircleComponent, selectors: [["aol-style-circle"]], inputs: { fill: "fill", radius: "radius", snapToPixel: "snapToPixel", stroke: "stroke", atlasManager: "atlasManager" }, features: [ɵngcc0.ɵɵNgOnChangesFeature], ngContentSelectors: _c0, decls: 1, vars: 0, template: function StyleCircleComponent_Template(rf, ctx) { if (rf & 1) {
+StyleCircleComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: StyleCircleComponent, selectors: [["aol-style-circle"]], inputs: { fill: "fill", radius: "radius", snapToPixel: "snapToPixel", stroke: "stroke" }, features: [ɵngcc0.ɵɵNgOnChangesFeature], ngContentSelectors: _c0, decls: 1, vars: 0, template: function StyleCircleComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵprojection(0);
     } }, encapsulation: 2 });
@@ -2143,9 +2144,6 @@ __decorate([
 __decorate([
     Input()
 ], StyleCircleComponent.prototype, "stroke", void 0);
-__decorate([
-    Input()
-], StyleCircleComponent.prototype, "atlasManager", void 0);
 StyleCircleComponent = __decorate([ __param(0, Host())
 ], StyleCircleComponent);
 
@@ -3161,10 +3159,10 @@ let DrawInteractionComponent = class DrawInteractionComponent {
     ngOnInit() {
         this.instance = new Draw(this);
         this.instance.on('change', (event) => this.olChange.emit(event));
-        this.instance.on('change:active', (event) => this.olChangeActive.emit(event));
+        // TODO this.instance.on('change:active', (event: DrawEvent) => this.olChangeActive.emit(event));
         this.instance.on('drawend', (event) => this.drawEnd.emit(event));
         this.instance.on('drawstart', (event) => this.drawStart.emit(event));
-        this.instance.on('propertychange', (event) => this.propertyChange.emit(event));
+        // TODO this.instance.on('propertychange', (event: DrawEvent) => this.propertyChange.emit(event));
         this.map.instance.addInteraction(this.instance);
     }
     ngOnDestroy() {
@@ -3248,7 +3246,7 @@ let SelectInteractionComponent = class SelectInteractionComponent {
         this.instance = new Select(this);
         this.instance.on('change', (event) => this.olChange.emit(event));
         this.instance.on('select', (event) => this.olSelect.emit(event));
-        this.instance.on('propertychange', (event) => this.propertyChange.emit(event));
+        // TODO this.instance.on('propertychange', (event: SelectEvent) => this.propertyChange.emit(event));
         this.map.instance.addInteraction(this.instance);
     }
     ngOnDestroy() {
@@ -3312,8 +3310,8 @@ let ModifyInteractionComponent = class ModifyInteractionComponent {
     ngOnInit() {
         this.instance = new Modify(this);
         this.instance.on('change', (event) => this.olChange.emit(event));
-        this.instance.on('change:active', (event) => this.olChangeActive.emit(event));
-        this.instance.on('propertychange', (event) => this.propertyChange.emit(event));
+        // TODO this.instance.on('change:active', (event: ModifyEvent) => this.olChangeActive.emit(event));
+        // TODO this.instance.on('propertychange', (event: ModifyEvent) => this.propertyChange.emit(event));
         this.instance.on('modifyend', (event) => this.modifyEnd.emit(event));
         this.instance.on('modifystart', (event) => this.modifyStart.emit(event));
         this.map.instance.addInteraction(this.instance);
@@ -3376,7 +3374,7 @@ let TranslateInteractionComponent = class TranslateInteractionComponent {
     ngOnInit() {
         this.instance = new Translate(this);
         this.instance.on('change', (event) => this.olChange.emit(event));
-        this.instance.on('propertychange', (event) => this.propertyChange.emit(event));
+        // TODO this.instance.on('propertychange', (event: TranslateEvent) => this.propertyChange.emit(event));
         this.instance.on('translateend', (event) => this.translateEnd.emit(event));
         this.instance.on('translatestart', (event) => this.translateStart.emit(event));
         this.instance.on('translating', (event) => this.translating.emit(event));
@@ -3421,8 +3419,7 @@ let AttributionComponent = class AttributionComponent {
         this.elementRef = elementRef;
     }
     ngOnInit() {
-        this.html = this.elementRef.nativeElement.innerHTML;
-        this.instance = new Attribution(this);
+        this.label = this.elementRef.nativeElement.innerHTML;
     }
 };
 AttributionComponent.ɵfac = function AttributionComponent_Factory(t) { return new (t || AttributionComponent)(ɵngcc0.ɵɵdirectiveInject(ɵngcc0.ElementRef)); };
@@ -3441,7 +3438,7 @@ let AttributionsComponent = class AttributionsComponent {
     /* we can do this at the very end */
     ngAfterViewInit() {
         if (this.attributions.length) {
-            this.instance = this.attributions.map((cmp) => cmp.instance);
+            this.instance = this.attributions.map((cmp) => cmp.label);
             // console.log('setting attributions:', this.instance);
             this.source.instance.setAttributions(this.instance);
         }
@@ -4429,8 +4426,6 @@ const ɵTileGridWMTSComponent_BaseFactory = ɵngcc0.ɵɵgetInheritedFactory(Tile
         }], snapToPixel: [{
             type: Input
         }], stroke: [{
-            type: Input
-        }], atlasManager: [{
             type: Input
         }] }); })();
 /*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(StyleTextComponent, [{

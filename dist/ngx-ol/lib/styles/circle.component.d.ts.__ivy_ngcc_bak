@@ -1,5 +1,5 @@
 import { AfterContentInit, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
-import { AtlasManager, Circle, Fill, Stroke } from 'ol/style';
+import { Circle, Fill, Stroke } from 'ol/style';
 import { StyleComponent } from './style.component';
 export declare class StyleCircleComponent implements AfterContentInit, OnChanges, OnDestroy {
     private host;
@@ -9,7 +9,6 @@ export declare class StyleCircleComponent implements AfterContentInit, OnChanges
     radius: number;
     snapToPixel: boolean;
     stroke: Stroke;
-    atlasManager: AtlasManager;
     constructor(host: StyleComponent);
     /**
      * WORK-AROUND: since the re-rendering is not triggered on style change

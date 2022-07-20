@@ -1,28 +1,29 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('ol/View'), require('ol/Map'), require('ol'), require('ol/layer'), require('ol/source'), require('ol/tilegrid'), require('ol/tilegrid/TileGrid'), require('ol/tilegrid/WMTS'), require('ol/format'), require('ol/geom'), require('ol/proj'), require('ol/style'), require('ol/control'), require('ol/control/MousePosition'), require('ol/interaction')) :
-    typeof define === 'function' && define.amd ? define('ngx-ol', ['exports', '@angular/core', '@angular/common', 'ol/View', 'ol/Map', 'ol', 'ol/layer', 'ol/source', 'ol/tilegrid', 'ol/tilegrid/TileGrid', 'ol/tilegrid/WMTS', 'ol/format', 'ol/geom', 'ol/proj', 'ol/style', 'ol/control', 'ol/control/MousePosition', 'ol/interaction'], factory) :
-    (global = global || self, factory(global['ngx-ol'] = {}, global.ng.core, global.ng.common, global.View, global.Map, global.ol, global['ol/layer'], global.source, global.tilegrid, global.TileGrid, global.WMTS, global.format, global.geom, global.proj, global.style, global.control, global.MousePosition, global.interaction));
-}(this, (function (exports, core, common, View, Map, ol, layer, source, tilegrid, TileGrid, WMTS, format, geom, proj, style, control, MousePosition, interaction) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('ol/View'), require('ol'), require('ol/layer'), require('ol/source'), require('ol/tilegrid'), require('ol/tilegrid/TileGrid'), require('ol/tilegrid/WMTS'), require('ol/format'), require('ol/source/ImageArcGISRest'), require('ol/geom'), require('ol/proj'), require('ol/Overlay'), require('ol/style'), require('ol/control'), require('ol/control/MousePosition'), require('ol/interaction')) :
+    typeof define === 'function' && define.amd ? define('ngx-ol', ['exports', '@angular/core', '@angular/common', 'ol/View', 'ol', 'ol/layer', 'ol/source', 'ol/tilegrid', 'ol/tilegrid/TileGrid', 'ol/tilegrid/WMTS', 'ol/format', 'ol/source/ImageArcGISRest', 'ol/geom', 'ol/proj', 'ol/Overlay', 'ol/style', 'ol/control', 'ol/control/MousePosition', 'ol/interaction'], factory) :
+    (global = global || self, factory(global['ngx-ol'] = {}, global.ng.core, global.ng.common, global.View, global.ol, global['ol/layer'], global.source, global.tilegrid, global.TileGrid, global.WMTS, global.format, global.ImageArcGISRest, global.geom, global.proj, global.Overlay, global.style, global.control, global.MousePosition, global.interaction));
+}(this, (function (exports, core, common, View, ol, layer, source, tilegrid, TileGrid, WMTS, format, ImageArcGISRest, geom, proj, Overlay, style, control, MousePosition, interaction) { 'use strict';
 
     View = View && Object.prototype.hasOwnProperty.call(View, 'default') ? View['default'] : View;
-    Map = Map && Object.prototype.hasOwnProperty.call(Map, 'default') ? Map['default'] : Map;
     TileGrid = TileGrid && Object.prototype.hasOwnProperty.call(TileGrid, 'default') ? TileGrid['default'] : TileGrid;
     WMTS = WMTS && Object.prototype.hasOwnProperty.call(WMTS, 'default') ? WMTS['default'] : WMTS;
+    ImageArcGISRest = ImageArcGISRest && Object.prototype.hasOwnProperty.call(ImageArcGISRest, 'default') ? ImageArcGISRest['default'] : ImageArcGISRest;
+    Overlay = Overlay && Object.prototype.hasOwnProperty.call(Overlay, 'default') ? Overlay['default'] : Overlay;
     MousePosition = MousePosition && Object.prototype.hasOwnProperty.call(MousePosition, 'default') ? MousePosition['default'] : MousePosition;
 
     /*! *****************************************************************************
-    Copyright (c) Microsoft Corporation.
+    Copyright (c) Microsoft Corporation. All rights reserved.
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+    this file except in compliance with the License. You may obtain a copy of the
+    License at http://www.apache.org/licenses/LICENSE-2.0
 
-    Permission to use, copy, modify, and/or distribute this software for any
-    purpose with or without fee is hereby granted.
+    THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+    WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+    MERCHANTABLITY OR NON-INFRINGEMENT.
 
-    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-    PERFORMANCE OF THIS SOFTWARE.
+    See the Apache Version 2.0 License for specific language governing permissions
+    and limitations under the License.
     ***************************************************************************** */
     /* global Reflect, Promise */
 
@@ -115,13 +116,8 @@
         }
     }
 
-    function __createBinding(o, m, k, k2) {
-        if (k2 === undefined) k2 = k;
-        o[k2] = m[k];
-    }
-
     function __exportStar(m, exports) {
-        for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
+        for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
     }
 
     function __values(o) {
@@ -289,7 +285,7 @@
         MapComponent.prototype.ngOnInit = function () {
             var _this = this;
             // console.log('creating ol.Map instance with:', this);
-            this.instance = new Map(this);
+            this.instance = new ol.Map(this);
             this.instance.setTarget(this.host.nativeElement.firstElementChild);
             this.instance.on('click', function (event) { return _this.olClick.emit(event); });
             this.instance.on('dblclick', function (event) { return _this.dblClick.emit(event); });
@@ -299,7 +295,7 @@
             this.instance.on('pointermove', function (event) { return _this.pointerMove.emit(event); });
             this.instance.on('postrender', function (event) { return _this.onpostrender.emit(event); });
             this.instance.on('postrender', function (event) { return _this.postRender.emit(event); });
-            this.instance.on('prerender', function (event) { return _this.onprerender.emit(event); });
+            // TODO this.instance.on('prerender', (event: RenderEvent) => this.onprerender.emit(event));
             this.instance.on('propertychange', function (event) { return _this.propertyChange.emit(event); });
             this.instance.on('singleclick', function (event) { return _this.singleClick.emit(event); });
         };
@@ -402,7 +398,7 @@
             // console.log('creating ol.View instance with: ', this);
             this.instance = new View(this);
             this.host.instance.setView(this.instance);
-            this.instance.on('change:zoom', function (event) { return _this.changeZoom.emit(event); });
+            // TODO this.instance.on('change:zoom', (event: ObjectEvent) => this.changeZoom.emit(event));
             this.instance.on('change:resolution', function (event) { return _this.changeResolution.emit(event); });
             this.instance.on('change:center', function (event) { return _this.changeCenter.emit(event); });
         };
@@ -1391,7 +1387,7 @@
             this.format = this.formatComponent.instance;
             this.tileGrid = this.tileGridComponent.instance;
             // console.log('creating ol.source.VectorTile instance with:', this);
-            this.instance = new ol.VectorTile(this);
+            this.instance = new source.VectorTile(this);
             this.host.instance.setSource(this.instance);
         };
         var SourceVectorTileComponent_1;
@@ -1750,7 +1746,7 @@
         SourceImageArcGISRestComponent_1 = SourceImageArcGISRestComponent;
         SourceImageArcGISRestComponent.prototype.ngOnInit = function () {
             var _this = this;
-            this.instance = new source.ImageArcGISRest(this);
+            this.instance = new ImageArcGISRest(this);
             this.host.instance.setSource(this.instance);
             this.instance.on('imageloadstart', function (event) { return _this.imageLoadStart.emit(event); });
             this.instance.on('imageloadend', function (event) { return _this.imageLoadEnd.emit(event); });
@@ -2147,7 +2143,7 @@
         OverlayComponent.prototype.ngOnInit = function () {
             if (this.content) {
                 this.element = this.content.elementRef.nativeElement;
-                this.instance = new ol.Overlay(this);
+                this.instance = new Overlay(this);
                 this.map.instance.addOverlay(this.instance);
             }
         };
@@ -2470,9 +2466,6 @@
         __decorate([
             core.Input()
         ], StyleCircleComponent.prototype, "stroke", void 0);
-        __decorate([
-            core.Input()
-        ], StyleCircleComponent.prototype, "atlasManager", void 0);
         StyleCircleComponent = __decorate([
             core.Component({
                 selector: 'aol-style-circle',
@@ -3593,10 +3586,10 @@
             var _this = this;
             this.instance = new interaction.Draw(this);
             this.instance.on('change', function (event) { return _this.olChange.emit(event); });
-            this.instance.on('change:active', function (event) { return _this.olChangeActive.emit(event); });
+            // TODO this.instance.on('change:active', (event: DrawEvent) => this.olChangeActive.emit(event));
             this.instance.on('drawend', function (event) { return _this.drawEnd.emit(event); });
             this.instance.on('drawstart', function (event) { return _this.drawStart.emit(event); });
-            this.instance.on('propertychange', function (event) { return _this.propertyChange.emit(event); });
+            // TODO this.instance.on('propertychange', (event: DrawEvent) => this.propertyChange.emit(event));
             this.map.instance.addInteraction(this.instance);
         };
         DrawInteractionComponent.prototype.ngOnDestroy = function () {
@@ -3686,7 +3679,7 @@
             this.instance = new interaction.Select(this);
             this.instance.on('change', function (event) { return _this.olChange.emit(event); });
             this.instance.on('select', function (event) { return _this.olSelect.emit(event); });
-            this.instance.on('propertychange', function (event) { return _this.propertyChange.emit(event); });
+            // TODO this.instance.on('propertychange', (event: SelectEvent) => this.propertyChange.emit(event));
             this.map.instance.addInteraction(this.instance);
         };
         SelectInteractionComponent.prototype.ngOnDestroy = function () {
@@ -3756,8 +3749,8 @@
             var _this = this;
             this.instance = new interaction.Modify(this);
             this.instance.on('change', function (event) { return _this.olChange.emit(event); });
-            this.instance.on('change:active', function (event) { return _this.olChangeActive.emit(event); });
-            this.instance.on('propertychange', function (event) { return _this.propertyChange.emit(event); });
+            // TODO this.instance.on('change:active', (event: ModifyEvent) => this.olChangeActive.emit(event));
+            // TODO this.instance.on('propertychange', (event: ModifyEvent) => this.propertyChange.emit(event));
             this.instance.on('modifyend', function (event) { return _this.modifyEnd.emit(event); });
             this.instance.on('modifystart', function (event) { return _this.modifyStart.emit(event); });
             this.map.instance.addInteraction(this.instance);
@@ -3826,7 +3819,7 @@
             var _this = this;
             this.instance = new interaction.Translate(this);
             this.instance.on('change', function (event) { return _this.olChange.emit(event); });
-            this.instance.on('propertychange', function (event) { return _this.propertyChange.emit(event); });
+            // TODO this.instance.on('propertychange', (event: TranslateEvent) => this.propertyChange.emit(event));
             this.instance.on('translateend', function (event) { return _this.translateEnd.emit(event); });
             this.instance.on('translatestart', function (event) { return _this.translateStart.emit(event); });
             this.instance.on('translating', function (event) { return _this.translating.emit(event); });
@@ -3876,8 +3869,7 @@
             this.elementRef = elementRef;
         }
         AttributionComponent.prototype.ngOnInit = function () {
-            this.html = this.elementRef.nativeElement.innerHTML;
-            this.instance = new control.Attribution(this);
+            this.label = this.elementRef.nativeElement.innerHTML;
         };
         AttributionComponent.ctorParameters = function () { return [
             { type: core.ElementRef }
@@ -3898,7 +3890,7 @@
         /* we can do this at the very end */
         AttributionsComponent.prototype.ngAfterViewInit = function () {
             if (this.attributions.length) {
-                this.instance = this.attributions.map(function (cmp) { return cmp.instance; });
+                this.instance = this.attributions.map(function (cmp) { return cmp.label; });
                 // console.log('setting attributions:', this.instance);
                 this.source.instance.setAttributions(this.instance);
             }

@@ -9,7 +9,7 @@ export declare class ControlMousePositionComponent implements OnInit, OnDestroy 
     instance: MousePosition;
     coordinateFormat: CoordinateFormat;
     projection: ProjectionLike;
-    target: Element;
+    target: HTMLElement;
     constructor(map: MapComponent, element: ElementRef);
     ngOnInit(): void;
     ngOnDestroy(): void;

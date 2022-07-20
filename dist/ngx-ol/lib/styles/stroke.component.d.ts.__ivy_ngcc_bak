@@ -9,9 +9,9 @@ export declare class StyleStrokeComponent implements OnInit, OnChanges {
     instance: Stroke;
     private host;
     color: Color | ColorLike;
-    lineCap: string;
+    lineCap: CanvasLineCap | undefined;
     lineDash: number[];
-    lineJoin: string;
+    lineJoin: CanvasLineJoin | undefined;
     miterLimit: number;
     width: number;
     constructor(styleHost: StyleComponent, styleCircleHost: StyleCircleComponent, styleTextHost: StyleTextComponent);

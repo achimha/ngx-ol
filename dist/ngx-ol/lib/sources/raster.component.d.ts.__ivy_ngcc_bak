@@ -1,6 +1,6 @@
 import { AfterContentInit, EventEmitter } from '@angular/core';
 import { Raster, Source } from 'ol/source';
-import { Operation, RasterOperationType, RasterSourceEvent } from 'ol/source/Raster';
+import { Operation, RasterSourceEvent } from 'ol/source/Raster';
 import { LayerImageComponent } from '../layers/layerimage.component';
 import { SourceComponent } from './source.component';
 export declare class SourceRasterComponent extends SourceComponent implements AfterContentInit {
@@ -8,7 +8,7 @@ export declare class SourceRasterComponent extends SourceComponent implements Af
     operation?: Operation;
     threads?: number;
     lib?: any;
-    operationType?: RasterOperationType;
+    operationType?: 'pixel' | 'image';
     beforeOperations: EventEmitter<RasterSourceEvent>;
     afterOperations: EventEmitter<RasterSourceEvent>;
     sources: Source[];
