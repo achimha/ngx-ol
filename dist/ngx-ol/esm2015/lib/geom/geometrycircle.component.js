@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { FeatureComponent } from '../feature.component';
 import { Circle } from 'ol/geom';
@@ -22,10 +22,10 @@ GeometryCircleComponent.ctorParameters = () => [
     { type: MapComponent },
     { type: FeatureComponent }
 ];
-__decorate([
+tslib_1.__decorate([
     Input()
 ], GeometryCircleComponent.prototype, "radius", null);
-GeometryCircleComponent = __decorate([
+GeometryCircleComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-geometry-circle',
         template: ` <ng-content></ng-content> `

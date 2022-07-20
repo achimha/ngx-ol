@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { defaults } from 'ol/control';
 import { MapComponent } from '../map.component';
@@ -20,25 +20,25 @@ var DefaultControlComponent = /** @class */ (function () {
     DefaultControlComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DefaultControlComponent.prototype, "attribution", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DefaultControlComponent.prototype, "attributionOptions", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DefaultControlComponent.prototype, "rotate", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DefaultControlComponent.prototype, "rotateOptions", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DefaultControlComponent.prototype, "zoom", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DefaultControlComponent.prototype, "zoomOptions", void 0);
-    DefaultControlComponent = __decorate([
+    DefaultControlComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-control-defaults',
             template: ''

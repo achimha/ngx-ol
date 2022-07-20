@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import WMTS from 'ol/tilegrid/WMTS';
 import { TileGridComponent } from './tilegrid.component';
@@ -7,28 +7,28 @@ let TileGridWMTSComponent = class TileGridWMTSComponent extends TileGridComponen
         this.instance = new WMTS(this);
     }
 };
-__decorate([
+tslib_1.__decorate([
     Input()
 ], TileGridWMTSComponent.prototype, "origin", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], TileGridWMTSComponent.prototype, "origins", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], TileGridWMTSComponent.prototype, "resolutions", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], TileGridWMTSComponent.prototype, "matrixIds", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], TileGridWMTSComponent.prototype, "sizes", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], TileGridWMTSComponent.prototype, "tileSizes", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], TileGridWMTSComponent.prototype, "widths", void 0);
-TileGridWMTSComponent = __decorate([
+TileGridWMTSComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-tilegrid-wmts',
         template: ''

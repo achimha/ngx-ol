@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Input } from '@angular/core';
 var LayerComponent = /** @class */ (function () {
     function LayerComponent(host) {
@@ -38,28 +38,28 @@ var LayerComponent = /** @class */ (function () {
         // console.log('changes detected in aol-layer, setting new properties: ', properties);
         this.instance.setProperties(properties, false);
     };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], LayerComponent.prototype, "opacity", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], LayerComponent.prototype, "visible", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], LayerComponent.prototype, "extent", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], LayerComponent.prototype, "zIndex", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], LayerComponent.prototype, "minResolution", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], LayerComponent.prototype, "maxResolution", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], LayerComponent.prototype, "prerender", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], LayerComponent.prototype, "postrender", void 0);
     return LayerComponent;

@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, ElementRef, OnInit } from '@angular/core';
 var AttributionComponent = /** @class */ (function () {
     function AttributionComponent(elementRef) {
@@ -10,7 +10,7 @@ var AttributionComponent = /** @class */ (function () {
     AttributionComponent.ctorParameters = function () { return [
         { type: ElementRef }
     ]; };
-    AttributionComponent = __decorate([
+    AttributionComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-attribution',
             template: '<ng-content></ng-content>'

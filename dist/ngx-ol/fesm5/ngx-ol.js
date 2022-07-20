@@ -762,7 +762,7 @@ var SourceXYZComponent = /** @class */ (function (_super) {
         Input()
     ], SourceXYZComponent.prototype, "wrapX", void 0);
     __decorate([
-        ContentChild(TileGridComponent)
+        ContentChild(TileGridComponent, { static: false })
     ], SourceXYZComponent.prototype, "tileGridXYZ", void 0);
     __decorate([
         Output()
@@ -986,7 +986,7 @@ var SourceClusterComponent = /** @class */ (function (_super) {
         Input()
     ], SourceClusterComponent.prototype, "wrapX", void 0);
     __decorate([
-        ContentChild(SourceVectorComponent)
+        ContentChild(SourceVectorComponent, { static: false })
     ], SourceClusterComponent.prototype, "sourceVectorComponent", void 0);
     SourceClusterComponent = SourceClusterComponent_1 = __decorate([
         Component({
@@ -1149,7 +1149,7 @@ var SourceTileWMTSComponent = /** @class */ (function (_super) {
         Output()
     ], SourceTileWMTSComponent.prototype, "tileLoadError", void 0);
     __decorate([
-        ContentChild(TileGridWMTSComponent)
+        ContentChild(TileGridWMTSComponent, { static: false })
     ], SourceTileWMTSComponent.prototype, "tileGridWMTS", void 0);
     SourceTileWMTSComponent = SourceTileWMTSComponent_1 = __decorate([
         Component({
@@ -1212,10 +1212,10 @@ var SourceVectorTileComponent = /** @class */ (function (_super) {
         Input()
     ], SourceVectorTileComponent.prototype, "wrapX", void 0);
     __decorate([
-        ContentChild(FormatComponent)
+        ContentChild(FormatComponent, { static: false })
     ], SourceVectorTileComponent.prototype, "formatComponent", void 0);
     __decorate([
-        ContentChild(TileGridComponent)
+        ContentChild(TileGridComponent, { static: false })
     ], SourceVectorTileComponent.prototype, "tileGridComponent", void 0);
     SourceVectorTileComponent = SourceVectorTileComponent_1 = __decorate([
         Component({
@@ -1655,7 +1655,7 @@ var SourceRasterComponent = /** @class */ (function (_super) {
         Output()
     ], SourceRasterComponent.prototype, "afterOperations", void 0);
     __decorate([
-        ContentChild(SourceComponent)
+        ContentChild(SourceComponent, { static: false })
     ], SourceRasterComponent.prototype, "source", null);
     SourceRasterComponent = SourceRasterComponent_1 = __decorate([
         Component({

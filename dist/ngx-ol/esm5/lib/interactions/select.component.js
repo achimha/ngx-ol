@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MapComponent } from '../map.component';
 import { Select } from 'ol/interaction';
@@ -23,46 +23,46 @@ var SelectInteractionComponent = /** @class */ (function () {
     SelectInteractionComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], SelectInteractionComponent.prototype, "addCondition", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], SelectInteractionComponent.prototype, "condition", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], SelectInteractionComponent.prototype, "layers", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], SelectInteractionComponent.prototype, "style", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], SelectInteractionComponent.prototype, "removeCondition", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], SelectInteractionComponent.prototype, "toggleCondition", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], SelectInteractionComponent.prototype, "multi", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], SelectInteractionComponent.prototype, "features", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], SelectInteractionComponent.prototype, "filter", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], SelectInteractionComponent.prototype, "wrapX", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Output()
     ], SelectInteractionComponent.prototype, "olChange", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Output()
     ], SelectInteractionComponent.prototype, "olSelect", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Output()
     ], SelectInteractionComponent.prototype, "propertyChange", void 0);
-    SelectInteractionComponent = __decorate([
+    SelectInteractionComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-interaction-select',
             template: ''

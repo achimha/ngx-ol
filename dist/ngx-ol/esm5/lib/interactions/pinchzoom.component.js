@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { PinchZoom } from 'ol/interaction';
 import { MapComponent } from '../map.component';
@@ -16,13 +16,13 @@ var PinchZoomInteractionComponent = /** @class */ (function () {
     PinchZoomInteractionComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], PinchZoomInteractionComponent.prototype, "duration", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], PinchZoomInteractionComponent.prototype, "constrainResolution", void 0);
-    PinchZoomInteractionComponent = __decorate([
+    PinchZoomInteractionComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-interaction-pinchzoom',
             template: ''

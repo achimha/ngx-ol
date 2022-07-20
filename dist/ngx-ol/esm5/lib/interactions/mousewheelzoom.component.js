@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { MouseWheelZoom } from 'ol/interaction';
 import { MapComponent } from '../map.component';
@@ -16,16 +16,16 @@ var MouseWheelZoomInteractionComponent = /** @class */ (function () {
     MouseWheelZoomInteractionComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], MouseWheelZoomInteractionComponent.prototype, "duration", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], MouseWheelZoomInteractionComponent.prototype, "timeout", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], MouseWheelZoomInteractionComponent.prototype, "useAnchor", void 0);
-    MouseWheelZoomInteractionComponent = __decorate([
+    MouseWheelZoomInteractionComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-interaction-mousewheelzoom',
             template: ''

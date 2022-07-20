@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { FullScreen } from 'ol/control';
 import { MapComponent } from '../map.component';
@@ -18,22 +18,22 @@ var ControlFullScreenComponent = /** @class */ (function () {
     ControlFullScreenComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], ControlFullScreenComponent.prototype, "className", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], ControlFullScreenComponent.prototype, "label", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], ControlFullScreenComponent.prototype, "labelActive", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], ControlFullScreenComponent.prototype, "tipLabel", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], ControlFullScreenComponent.prototype, "keys", void 0);
-    ControlFullScreenComponent = __decorate([
+    ControlFullScreenComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-control-fullscreen',
             template: " <ng-content></ng-content> "

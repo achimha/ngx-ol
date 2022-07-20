@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { DoubleClickZoom } from 'ol/interaction';
 import { MapComponent } from '../map.component';
@@ -16,13 +16,13 @@ var DoubleClickZoomInteractionComponent = /** @class */ (function () {
     DoubleClickZoomInteractionComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DoubleClickZoomInteractionComponent.prototype, "duration", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DoubleClickZoomInteractionComponent.prototype, "delta", void 0);
-    DoubleClickZoomInteractionComponent = __decorate([
+    DoubleClickZoomInteractionComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-interaction-doubleclickzoom',
             template: ''

@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Translate } from 'ol/interaction';
 import { MapComponent } from '../map.component';
@@ -27,31 +27,31 @@ var TranslateInteractionComponent = /** @class */ (function () {
     TranslateInteractionComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], TranslateInteractionComponent.prototype, "features", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], TranslateInteractionComponent.prototype, "layers", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], TranslateInteractionComponent.prototype, "hitTolerance", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Output()
     ], TranslateInteractionComponent.prototype, "olChange", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Output()
     ], TranslateInteractionComponent.prototype, "propertyChange", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Output()
     ], TranslateInteractionComponent.prototype, "translateEnd", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Output()
     ], TranslateInteractionComponent.prototype, "translateStart", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Output()
     ], TranslateInteractionComponent.prototype, "translating", void 0);
-    TranslateInteractionComponent = __decorate([
+    TranslateInteractionComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-interaction-translate',
             template: ''

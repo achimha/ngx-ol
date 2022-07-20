@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { DragAndDrop } from 'ol/interaction';
 import { MapComponent } from '../map.component';
@@ -16,16 +16,16 @@ var DragAndDropInteractionComponent = /** @class */ (function () {
     DragAndDropInteractionComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DragAndDropInteractionComponent.prototype, "formatConstructors", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DragAndDropInteractionComponent.prototype, "projection", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DragAndDropInteractionComponent.prototype, "target", void 0);
-    DragAndDropInteractionComponent = __decorate([
+    DragAndDropInteractionComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-interaction-draganddrop',
             template: ''

@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component } from '@angular/core';
 import { FeatureComponent } from '../feature.component';
 import { SimpleGeometryComponent } from './simplegeometry.component';
@@ -26,7 +26,7 @@ GeometryMultiPolygonComponent.ctorParameters = () => [
     { type: MapComponent },
     { type: FeatureComponent }
 ];
-GeometryMultiPolygonComponent = __decorate([
+GeometryMultiPolygonComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-geometry-multipolygon',
         template: ` <ng-content></ng-content> `

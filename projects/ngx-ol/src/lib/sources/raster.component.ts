@@ -43,7 +43,7 @@ export class SourceRasterComponent extends SourceComponent implements AfterConte
 
   sources: Source[] = [];
 
-  @ContentChild(SourceComponent)
+  @ContentChild(SourceComponent, { static: false })
   set source(sourceComponent: SourceComponent) {
     this.sources = [sourceComponent.instance];
     if (this.instance) {

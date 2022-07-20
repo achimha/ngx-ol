@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { DragZoom } from 'ol/interaction';
 import { MapComponent } from '../map.component';
@@ -16,19 +16,19 @@ var DragZoomInteractionComponent = /** @class */ (function () {
     DragZoomInteractionComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DragZoomInteractionComponent.prototype, "className", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DragZoomInteractionComponent.prototype, "condition", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DragZoomInteractionComponent.prototype, "duration", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], DragZoomInteractionComponent.prototype, "out", void 0);
-    DragZoomInteractionComponent = __decorate([
+    DragZoomInteractionComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-interaction-dragzoom',
             template: ''

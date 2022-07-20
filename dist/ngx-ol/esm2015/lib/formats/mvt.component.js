@@ -1,5 +1,5 @@
 var FormatMVTComponent_1;
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, forwardRef, Input } from '@angular/core';
 import { FormatComponent } from './format.component';
 import { MVT } from 'ol/format';
@@ -9,19 +9,19 @@ let FormatMVTComponent = FormatMVTComponent_1 = class FormatMVTComponent extends
         this.instance = new MVT(this);
     }
 };
-__decorate([
+tslib_1.__decorate([
     Input()
 ], FormatMVTComponent.prototype, "featureClass", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], FormatMVTComponent.prototype, "geometryName", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], FormatMVTComponent.prototype, "layerName", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], FormatMVTComponent.prototype, "layers", void 0);
-FormatMVTComponent = FormatMVTComponent_1 = __decorate([
+FormatMVTComponent = FormatMVTComponent_1 = tslib_1.__decorate([
     Component({
         selector: 'aol-format-mvt',
         template: '',

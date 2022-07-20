@@ -969,7 +969,7 @@
             core.Input()
         ], SourceXYZComponent.prototype, "wrapX", void 0);
         __decorate([
-            core.ContentChild(TileGridComponent)
+            core.ContentChild(TileGridComponent, { static: false })
         ], SourceXYZComponent.prototype, "tileGridXYZ", void 0);
         __decorate([
             core.Output()
@@ -1193,7 +1193,7 @@
             core.Input()
         ], SourceClusterComponent.prototype, "wrapX", void 0);
         __decorate([
-            core.ContentChild(SourceVectorComponent)
+            core.ContentChild(SourceVectorComponent, { static: false })
         ], SourceClusterComponent.prototype, "sourceVectorComponent", void 0);
         SourceClusterComponent = SourceClusterComponent_1 = __decorate([
             core.Component({
@@ -1356,7 +1356,7 @@
             core.Output()
         ], SourceTileWMTSComponent.prototype, "tileLoadError", void 0);
         __decorate([
-            core.ContentChild(TileGridWMTSComponent)
+            core.ContentChild(TileGridWMTSComponent, { static: false })
         ], SourceTileWMTSComponent.prototype, "tileGridWMTS", void 0);
         SourceTileWMTSComponent = SourceTileWMTSComponent_1 = __decorate([
             core.Component({
@@ -1419,10 +1419,10 @@
             core.Input()
         ], SourceVectorTileComponent.prototype, "wrapX", void 0);
         __decorate([
-            core.ContentChild(FormatComponent)
+            core.ContentChild(FormatComponent, { static: false })
         ], SourceVectorTileComponent.prototype, "formatComponent", void 0);
         __decorate([
-            core.ContentChild(TileGridComponent)
+            core.ContentChild(TileGridComponent, { static: false })
         ], SourceVectorTileComponent.prototype, "tileGridComponent", void 0);
         SourceVectorTileComponent = SourceVectorTileComponent_1 = __decorate([
             core.Component({
@@ -1862,7 +1862,7 @@
             core.Output()
         ], SourceRasterComponent.prototype, "afterOperations", void 0);
         __decorate([
-            core.ContentChild(SourceComponent)
+            core.ContentChild(SourceComponent, { static: false })
         ], SourceRasterComponent.prototype, "source", null);
         SourceRasterComponent = SourceRasterComponent_1 = __decorate([
             core.Component({

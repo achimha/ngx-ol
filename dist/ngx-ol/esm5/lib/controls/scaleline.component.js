@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { ScaleLine } from 'ol/control';
 import { MapComponent } from '../map.component';
@@ -18,10 +18,10 @@ var ControlScaleLineComponent = /** @class */ (function () {
     ControlScaleLineComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], ControlScaleLineComponent.prototype, "units", void 0);
-    ControlScaleLineComponent = __decorate([
+    ControlScaleLineComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-control-scaleline',
             template: " <ng-content></ng-content> "

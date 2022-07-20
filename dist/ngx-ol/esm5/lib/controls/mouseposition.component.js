@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
 import MousePosition from 'ol/control/MousePosition';
 import { MapComponent } from '../map.component';
@@ -21,13 +21,13 @@ var ControlMousePositionComponent = /** @class */ (function () {
         { type: MapComponent },
         { type: ElementRef }
     ]; };
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], ControlMousePositionComponent.prototype, "coordinateFormat", void 0);
-    __decorate([
+    tslib_1.__decorate([
         Input()
     ], ControlMousePositionComponent.prototype, "projection", void 0);
-    ControlMousePositionComponent = __decorate([
+    ControlMousePositionComponent = tslib_1.__decorate([
         Component({
             selector: 'aol-control-mouseposition',
             template: ""

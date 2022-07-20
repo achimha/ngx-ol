@@ -31,7 +31,7 @@ export class SourceClusterComponent extends SourceComponent implements AfterCont
   @Input()
   wrapX?: boolean;
 
-  @ContentChild(SourceVectorComponent)
+  @ContentChild(SourceVectorComponent, { static: false })
   sourceVectorComponent: SourceVectorComponent;
   source: Vector;
 

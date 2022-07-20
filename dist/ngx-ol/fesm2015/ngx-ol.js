@@ -741,7 +741,7 @@ __decorate([
     Input()
 ], SourceXYZComponent.prototype, "wrapX", void 0);
 __decorate([
-    ContentChild(TileGridComponent)
+    ContentChild(TileGridComponent, { static: false })
 ], SourceXYZComponent.prototype, "tileGridXYZ", void 0);
 __decorate([
     Output()
@@ -950,7 +950,7 @@ __decorate([
     Input()
 ], SourceClusterComponent.prototype, "wrapX", void 0);
 __decorate([
-    ContentChild(SourceVectorComponent)
+    ContentChild(SourceVectorComponent, { static: false })
 ], SourceClusterComponent.prototype, "sourceVectorComponent", void 0);
 SourceClusterComponent = SourceClusterComponent_1 = __decorate([
     Component({
@@ -1103,7 +1103,7 @@ __decorate([
     Output()
 ], SourceTileWMTSComponent.prototype, "tileLoadError", void 0);
 __decorate([
-    ContentChild(TileGridWMTSComponent)
+    ContentChild(TileGridWMTSComponent, { static: false })
 ], SourceTileWMTSComponent.prototype, "tileGridWMTS", void 0);
 SourceTileWMTSComponent = SourceTileWMTSComponent_1 = __decorate([
     Component({
@@ -1162,10 +1162,10 @@ __decorate([
     Input()
 ], SourceVectorTileComponent.prototype, "wrapX", void 0);
 __decorate([
-    ContentChild(FormatComponent)
+    ContentChild(FormatComponent, { static: false })
 ], SourceVectorTileComponent.prototype, "formatComponent", void 0);
 __decorate([
-    ContentChild(TileGridComponent)
+    ContentChild(TileGridComponent, { static: false })
 ], SourceVectorTileComponent.prototype, "tileGridComponent", void 0);
 SourceVectorTileComponent = SourceVectorTileComponent_1 = __decorate([
     Component({
@@ -1572,7 +1572,7 @@ __decorate([
     Output()
 ], SourceRasterComponent.prototype, "afterOperations", void 0);
 __decorate([
-    ContentChild(SourceComponent)
+    ContentChild(SourceComponent, { static: false })
 ], SourceRasterComponent.prototype, "source", null);
 SourceRasterComponent = SourceRasterComponent_1 = __decorate([
     Component({

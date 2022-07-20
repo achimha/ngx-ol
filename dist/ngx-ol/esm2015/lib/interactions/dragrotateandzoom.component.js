@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { DragRotateAndZoom } from 'ol/interaction';
 import { MapComponent } from '../map.component';
@@ -17,13 +17,13 @@ let DragRotateAndZoomInteractionComponent = class DragRotateAndZoomInteractionCo
 DragRotateAndZoomInteractionComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-__decorate([
+tslib_1.__decorate([
     Input()
 ], DragRotateAndZoomInteractionComponent.prototype, "condition", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], DragRotateAndZoomInteractionComponent.prototype, "duration", void 0);
-DragRotateAndZoomInteractionComponent = __decorate([
+DragRotateAndZoomInteractionComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-interaction-dragrotateandzoom',
         template: ''

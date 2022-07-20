@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MapComponent } from '../map.component';
 import { Modify } from 'ol/interaction';
@@ -27,43 +27,43 @@ let ModifyInteractionComponent = class ModifyInteractionComponent {
 ModifyInteractionComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ModifyInteractionComponent.prototype, "condition", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ModifyInteractionComponent.prototype, "deleteCondition", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ModifyInteractionComponent.prototype, "pixelTolerance", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ModifyInteractionComponent.prototype, "style", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ModifyInteractionComponent.prototype, "features", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ModifyInteractionComponent.prototype, "wrapX", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ModifyInteractionComponent.prototype, "source", void 0);
-__decorate([
+tslib_1.__decorate([
     Output()
 ], ModifyInteractionComponent.prototype, "modifyEnd", void 0);
-__decorate([
+tslib_1.__decorate([
     Output()
 ], ModifyInteractionComponent.prototype, "modifyStart", void 0);
-__decorate([
+tslib_1.__decorate([
     Output()
 ], ModifyInteractionComponent.prototype, "olChange", void 0);
-__decorate([
+tslib_1.__decorate([
     Output()
 ], ModifyInteractionComponent.prototype, "olChangeActive", void 0);
-__decorate([
+tslib_1.__decorate([
     Output()
 ], ModifyInteractionComponent.prototype, "propertyChange", void 0);
-ModifyInteractionComponent = __decorate([
+ModifyInteractionComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-interaction-modify',
         template: ''

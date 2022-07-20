@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component } from '@angular/core';
 import { FeatureComponent } from '../feature.component';
 import { SimpleGeometryComponent } from './simplegeometry.component';
@@ -23,7 +23,7 @@ GeometryMultiLinestringComponent.ctorParameters = () => [
     { type: MapComponent },
     { type: FeatureComponent }
 ];
-GeometryMultiLinestringComponent = __decorate([
+GeometryMultiLinestringComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-geometry-multilinestring',
         template: ` <ng-content></ng-content> `

@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, ElementRef } from '@angular/core';
 let ContentComponent = class ContentComponent {
     constructor(elementRef) {
@@ -8,7 +8,7 @@ let ContentComponent = class ContentComponent {
 ContentComponent.ctorParameters = () => [
     { type: ElementRef }
 ];
-ContentComponent = __decorate([
+ContentComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-content',
         template: '<ng-content></ng-content>'

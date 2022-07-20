@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { OverviewMap } from 'ol/control';
 import { MapComponent } from '../map.component';
@@ -27,31 +27,31 @@ let ControlOverviewMapComponent = class ControlOverviewMapComponent {
 ControlOverviewMapComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlOverviewMapComponent.prototype, "collapsed", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlOverviewMapComponent.prototype, "collapseLabel", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlOverviewMapComponent.prototype, "collapsible", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlOverviewMapComponent.prototype, "label", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlOverviewMapComponent.prototype, "layers", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlOverviewMapComponent.prototype, "target", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlOverviewMapComponent.prototype, "tipLabel", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlOverviewMapComponent.prototype, "view", void 0);
-ControlOverviewMapComponent = __decorate([
+ControlOverviewMapComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-control-overviewmap',
         template: ` <ng-content></ng-content> `

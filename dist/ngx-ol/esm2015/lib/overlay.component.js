@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, ContentChild, Input } from '@angular/core';
 import { MapComponent } from './map.component';
 import Overlay from 'ol/Overlay';
@@ -24,34 +24,34 @@ let OverlayComponent = class OverlayComponent {
 OverlayComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-__decorate([
+tslib_1.__decorate([
     ContentChild(ContentComponent, { static: true })
 ], OverlayComponent.prototype, "content", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], OverlayComponent.prototype, "id", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], OverlayComponent.prototype, "offset", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], OverlayComponent.prototype, "positioning", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], OverlayComponent.prototype, "stopEvent", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], OverlayComponent.prototype, "insertFirst", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], OverlayComponent.prototype, "autoPan", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], OverlayComponent.prototype, "autoPanAnimation", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], OverlayComponent.prototype, "autoPanMargin", void 0);
-OverlayComponent = __decorate([
+OverlayComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-overlay',
         template: '<ng-content></ng-content>'

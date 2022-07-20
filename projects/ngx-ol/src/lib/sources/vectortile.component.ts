@@ -33,10 +33,10 @@ export class SourceVectorTileComponent extends SourceComponent implements AfterC
   @Input()
   wrapX: boolean;
 
-  @ContentChild(FormatComponent)
+  @ContentChild(FormatComponent, { static: false })
   formatComponent: FormatComponent;
   format: Feature;
-  @ContentChild(TileGridComponent)
+  @ContentChild(TileGridComponent, { static: false })
   tileGridComponent: TileGridComponent;
   tileGrid: TileGrid;
 

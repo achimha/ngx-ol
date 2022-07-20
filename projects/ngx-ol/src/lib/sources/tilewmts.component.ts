@@ -71,7 +71,7 @@ export class SourceTileWMTSComponent extends SourceComponent implements AfterCon
   @Output()
   tileLoadError: EventEmitter<TileSourceEvent> = new EventEmitter<TileSourceEvent>();
 
-  @ContentChild(TileGridWMTSComponent)
+  @ContentChild(TileGridWMTSComponent, { static: false })
   tileGridWMTS: TileGridWMTSComponent;
 
   constructor(@Host() layer: LayerTileComponent) {

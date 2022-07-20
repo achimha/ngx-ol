@@ -59,7 +59,7 @@ export class SourceXYZComponent extends SourceComponent implements AfterContentI
   @Input()
   wrapX: boolean;
 
-  @ContentChild(TileGridComponent)
+  @ContentChild(TileGridComponent, { static: false })
   tileGridXYZ: TileGridComponent;
 
   @Output()

@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { Rotate } from 'ol/control';
 import { MapComponent } from '../map.component';
@@ -19,22 +19,22 @@ let ControlRotateComponent = class ControlRotateComponent {
 ControlRotateComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlRotateComponent.prototype, "className", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlRotateComponent.prototype, "label", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlRotateComponent.prototype, "tipLabel", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlRotateComponent.prototype, "duration", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ControlRotateComponent.prototype, "autoHide", void 0);
-ControlRotateComponent = __decorate([
+ControlRotateComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-control-rotate',
         template: ` <ng-content></ng-content> `

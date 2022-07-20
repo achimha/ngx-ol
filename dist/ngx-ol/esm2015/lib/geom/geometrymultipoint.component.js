@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component } from '@angular/core';
 import { FeatureComponent } from '../feature.component';
 import { SimpleGeometryComponent } from './simplegeometry.component';
@@ -21,7 +21,7 @@ GeometryMultiPointComponent.ctorParameters = () => [
     { type: MapComponent },
     { type: FeatureComponent }
 ];
-GeometryMultiPointComponent = __decorate([
+GeometryMultiPointComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-geometry-multipoint',
         template: ` <ng-content></ng-content> `

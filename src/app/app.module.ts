@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule, HammerModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { AngularOpenlayersModule } from 'ngx-ol';
 
 import { AppComponent } from './app.component';
@@ -60,7 +60,7 @@ import { ViewProjectionUpdateComponent } from './view-projection-update/view-pro
     ViewProjectionUpdateComponent,
     GraticuleComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, AngularOpenlayersModule, ReactiveFormsModule, HammerModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, AngularOpenlayersModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import View from 'ol/View';
 import { MapComponent } from './map.component';
@@ -60,79 +60,79 @@ let ViewComponent = class ViewComponent {
 ViewComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "constrainRotation", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "enableRotation", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "extent", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "maxResolution", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "minResolution", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "maxZoom", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "minZoom", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "resolution", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "resolutions", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "rotation", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "zoom", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "zoomFactor", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "center", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "projection", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "constrainOnlyCenter", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "smoothExtentConstraint", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "constrainResolution", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "smoothResolutionConstraint", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "showFullExtent", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "multiWorld", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], ViewComponent.prototype, "zoomAnimation", void 0);
-__decorate([
+tslib_1.__decorate([
     Output()
 ], ViewComponent.prototype, "changeZoom", void 0);
-__decorate([
+tslib_1.__decorate([
     Output()
 ], ViewComponent.prototype, "changeResolution", void 0);
-__decorate([
+tslib_1.__decorate([
     Output()
 ], ViewComponent.prototype, "changeCenter", void 0);
-ViewComponent = __decorate([
+ViewComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-view',
         template: ` <ng-content></ng-content> `

@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component, Input } from '@angular/core';
 import { Graticule } from 'ol';
 import { MapComponent } from './map.component';
@@ -38,19 +38,19 @@ let GraticuleComponent = class GraticuleComponent {
 GraticuleComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-__decorate([
+tslib_1.__decorate([
     Input()
 ], GraticuleComponent.prototype, "strokeStyle", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], GraticuleComponent.prototype, "showLabels", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], GraticuleComponent.prototype, "lonLabelPosition", void 0);
-__decorate([
+tslib_1.__decorate([
     Input()
 ], GraticuleComponent.prototype, "latLabelPosition", void 0);
-GraticuleComponent = __decorate([
+GraticuleComponent = tslib_1.__decorate([
     Component({
         selector: 'aol-graticule',
         template: '<ng-content></ng-content>'
