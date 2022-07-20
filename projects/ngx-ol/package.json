@@ -1,0 +1,15 @@
+{
+  "name": "ngx-ol",
+  "version": "1.0.0.20",
+  "scripts": {
+    "release": "standard-version -m \"chore(release): version %s\" -t \"\" --prerelease next"
+  },
+  "standard-version": {
+    "postchangelog": "cp projects/ngx-ol/CHANGELOG.md dist/ngx-ol/CHANGELOG.md"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=6.0.0 <=9.x.x",
+    "@angular/core": ">=6.0.0 <=9.x.x",
+    "ol": "^6.0.0"
+  }
+}
