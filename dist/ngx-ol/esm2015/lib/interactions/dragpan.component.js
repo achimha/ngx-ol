@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component, Input } from '@angular/core';
 import { DragPan } from 'ol/interaction';
 import { MapComponent } from '../map.component';
@@ -17,13 +17,13 @@ let DragPanInteractionComponent = class DragPanInteractionComponent {
 DragPanInteractionComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DragPanInteractionComponent.prototype, "condition", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DragPanInteractionComponent.prototype, "kinetic", void 0);
-DragPanInteractionComponent = tslib_1.__decorate([
+DragPanInteractionComponent = __decorate([
     Component({
         selector: 'aol-interaction-dragpan',
         template: ''

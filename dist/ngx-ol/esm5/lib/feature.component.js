@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component, Input } from '@angular/core';
 import { Feature } from 'ol';
 import { SourceVectorComponent } from './sources/vector.component';
@@ -25,10 +25,10 @@ var FeatureComponent = /** @class */ (function () {
     FeatureComponent.ctorParameters = function () { return [
         { type: SourceVectorComponent }
     ]; };
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], FeatureComponent.prototype, "id", void 0);
-    FeatureComponent = tslib_1.__decorate([
+    FeatureComponent = __decorate([
         Component({
             selector: 'aol-feature',
             template: " <ng-content></ng-content> "

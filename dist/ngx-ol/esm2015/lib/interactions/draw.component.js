@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { MapComponent } from '../map.component';
 import { Draw } from 'ol/interaction';
@@ -27,67 +27,67 @@ let DrawInteractionComponent = class DrawInteractionComponent {
 DrawInteractionComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "clickTolerance", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "features", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "source", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "snapTolerance", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "type", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "maxPoints", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "minPoints", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "finishCondition", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "style", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "geometryFunction", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "geometryName", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "condition", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "freehandCondition", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "freehand", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DrawInteractionComponent.prototype, "wrapX", void 0);
-tslib_1.__decorate([
+__decorate([
     Output()
 ], DrawInteractionComponent.prototype, "olChange", void 0);
-tslib_1.__decorate([
+__decorate([
     Output()
 ], DrawInteractionComponent.prototype, "olChangeActive", void 0);
-tslib_1.__decorate([
+__decorate([
     Output()
 ], DrawInteractionComponent.prototype, "drawEnd", void 0);
-tslib_1.__decorate([
+__decorate([
     Output()
 ], DrawInteractionComponent.prototype, "drawStart", void 0);
-tslib_1.__decorate([
+__decorate([
     Output()
 ], DrawInteractionComponent.prototype, "propertyChange", void 0);
-DrawInteractionComponent = tslib_1.__decorate([
+DrawInteractionComponent = __decorate([
     Component({
         selector: 'aol-interaction-draw',
         template: ''

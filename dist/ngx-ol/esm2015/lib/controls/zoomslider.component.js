@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component, Input } from '@angular/core';
 import { ZoomSlider } from 'ol/control';
 import { MapComponent } from '../map.component';
@@ -19,19 +19,19 @@ let ControlZoomSliderComponent = class ControlZoomSliderComponent {
 ControlZoomSliderComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-tslib_1.__decorate([
+__decorate([
     Input()
 ], ControlZoomSliderComponent.prototype, "className", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], ControlZoomSliderComponent.prototype, "duration", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], ControlZoomSliderComponent.prototype, "maxResolution", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], ControlZoomSliderComponent.prototype, "minResolution", void 0);
-ControlZoomSliderComponent = tslib_1.__decorate([
+ControlZoomSliderComponent = __decorate([
     Component({
         selector: 'aol-control-zoomslider',
         template: ` <ng-content></ng-content> `

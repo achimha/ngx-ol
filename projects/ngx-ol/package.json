@@ -1,6 +1,6 @@
 {
   "name": "ngx-ol",
-  "version": "1.0.0.20",
+  "version": "9.0.1",
   "scripts": {
     "release": "standard-version -m \"chore(release): version %s\" -t \"\" --prerelease next"
   },

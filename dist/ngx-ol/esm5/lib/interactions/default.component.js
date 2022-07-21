@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component } from '@angular/core';
 import { defaults } from 'ol/interaction';
 import { MapComponent } from '../map.component';
@@ -18,7 +18,7 @@ var DefaultInteractionComponent = /** @class */ (function () {
     DefaultInteractionComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    DefaultInteractionComponent = tslib_1.__decorate([
+    DefaultInteractionComponent = __decorate([
         Component({
             selector: 'aol-interaction-default',
             template: ''

@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component, Input } from '@angular/core';
 import { DragBox } from 'ol/interaction';
 import { MapComponent } from '../map.component';
@@ -17,16 +17,16 @@ let DragBoxInteractionComponent = class DragBoxInteractionComponent {
 DragBoxInteractionComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DragBoxInteractionComponent.prototype, "className", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DragBoxInteractionComponent.prototype, "condition", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], DragBoxInteractionComponent.prototype, "boxEndCondition", void 0);
-DragBoxInteractionComponent = tslib_1.__decorate([
+DragBoxInteractionComponent = __decorate([
     Component({
         selector: 'aol-interaction-dragbox',
         template: ''

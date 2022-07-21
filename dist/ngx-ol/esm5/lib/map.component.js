@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component, OnInit, ElementRef, Input, Output, EventEmitter, AfterViewInit, SimpleChanges, OnChanges, } from '@angular/core';
 import { Map } from 'ol';
 var MapComponent = /** @class */ (function () {
@@ -58,64 +58,64 @@ var MapComponent = /** @class */ (function () {
     MapComponent.ctorParameters = function () { return [
         { type: ElementRef }
     ]; };
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], MapComponent.prototype, "width", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], MapComponent.prototype, "height", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], MapComponent.prototype, "pixelRatio", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], MapComponent.prototype, "keyboardEventTarget", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], MapComponent.prototype, "loadTilesWhileAnimating", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], MapComponent.prototype, "loadTilesWhileInteracting", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], MapComponent.prototype, "logo", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], MapComponent.prototype, "renderer", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Output()
     ], MapComponent.prototype, "olClick", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Output()
     ], MapComponent.prototype, "dblClick", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Output()
     ], MapComponent.prototype, "moveStart", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Output()
     ], MapComponent.prototype, "moveEnd", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Output()
     ], MapComponent.prototype, "pointerDrag", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Output()
     ], MapComponent.prototype, "pointerMove", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Output()
     ], MapComponent.prototype, "onpostrender", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Output()
     ], MapComponent.prototype, "postRender", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Output()
     ], MapComponent.prototype, "onprerender", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Output()
     ], MapComponent.prototype, "propertyChange", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Output()
     ], MapComponent.prototype, "singleClick", void 0);
-    MapComponent = tslib_1.__decorate([
+    MapComponent = __decorate([
         Component({
             selector: 'aol-map',
             template: "\n    <div [style.width]=\"width\" [style.height]=\"height\"></div>\n    <ng-content></ng-content>\n  "

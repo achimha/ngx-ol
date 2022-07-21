@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Input } from '@angular/core';
 var SourceComponent = /** @class */ (function () {
     function SourceComponent(host) {
@@ -15,7 +15,7 @@ var SourceComponent = /** @class */ (function () {
             this.host.instance.setSource(s);
         }
     };
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], SourceComponent.prototype, "attributions", void 0);
     return SourceComponent;

@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Input } from '@angular/core';
 var SimpleGeometryComponent = /** @class */ (function () {
     function SimpleGeometryComponent(map, host) {
@@ -9,7 +9,7 @@ var SimpleGeometryComponent = /** @class */ (function () {
     SimpleGeometryComponent.prototype.ngOnInit = function () {
         this.host.instance.setGeometry(this.instance);
     };
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], SimpleGeometryComponent.prototype, "srid", void 0);
     return SimpleGeometryComponent;

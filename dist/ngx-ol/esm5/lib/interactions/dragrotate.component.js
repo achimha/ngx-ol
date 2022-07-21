@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component, Input } from '@angular/core';
 import { DragRotate } from 'ol/interaction';
 import { MapComponent } from '../map.component';
@@ -16,13 +16,13 @@ var DragRotateInteractionComponent = /** @class */ (function () {
     DragRotateInteractionComponent.ctorParameters = function () { return [
         { type: MapComponent }
     ]; };
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], DragRotateInteractionComponent.prototype, "condition", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], DragRotateInteractionComponent.prototype, "duration", void 0);
-    DragRotateInteractionComponent = tslib_1.__decorate([
+    DragRotateInteractionComponent = __decorate([
         Component({
             selector: 'aol-interaction-dragrotate',
             template: ''

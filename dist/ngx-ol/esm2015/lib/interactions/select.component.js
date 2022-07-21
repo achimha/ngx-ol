@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MapComponent } from '../map.component';
 import { Select } from 'ol/interaction';
@@ -23,46 +23,46 @@ let SelectInteractionComponent = class SelectInteractionComponent {
 SelectInteractionComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-tslib_1.__decorate([
+__decorate([
     Input()
 ], SelectInteractionComponent.prototype, "addCondition", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], SelectInteractionComponent.prototype, "condition", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], SelectInteractionComponent.prototype, "layers", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], SelectInteractionComponent.prototype, "style", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], SelectInteractionComponent.prototype, "removeCondition", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], SelectInteractionComponent.prototype, "toggleCondition", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], SelectInteractionComponent.prototype, "multi", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], SelectInteractionComponent.prototype, "features", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], SelectInteractionComponent.prototype, "filter", void 0);
-tslib_1.__decorate([
+__decorate([
     Input()
 ], SelectInteractionComponent.prototype, "wrapX", void 0);
-tslib_1.__decorate([
+__decorate([
     Output()
 ], SelectInteractionComponent.prototype, "olChange", void 0);
-tslib_1.__decorate([
+__decorate([
     Output()
 ], SelectInteractionComponent.prototype, "olSelect", void 0);
-tslib_1.__decorate([
+__decorate([
     Output()
 ], SelectInteractionComponent.prototype, "propertyChange", void 0);
-SelectInteractionComponent = tslib_1.__decorate([
+SelectInteractionComponent = __decorate([
     Component({
         selector: 'aol-interaction-select',
         template: ''

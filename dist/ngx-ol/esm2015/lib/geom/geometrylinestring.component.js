@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component } from '@angular/core';
 import { FeatureComponent } from '../feature.component';
 import { SimpleGeometryComponent } from './simplegeometry.component';
@@ -21,7 +21,7 @@ GeometryLinestringComponent.ctorParameters = () => [
     { type: MapComponent },
     { type: FeatureComponent }
 ];
-GeometryLinestringComponent = tslib_1.__decorate([
+GeometryLinestringComponent = __decorate([
     Component({
         selector: 'aol-geometry-linestring',
         template: ` <ng-content></ng-content> `

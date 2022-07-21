@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component, Input } from '@angular/core';
 import { createXYZ } from 'ol/tilegrid';
 import TileGrid from 'ol/tilegrid/TileGrid';
@@ -21,25 +21,25 @@ var TileGridComponent = /** @class */ (function () {
             this.instance = new TileGrid(this);
         }
     };
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], TileGridComponent.prototype, "extent", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], TileGridComponent.prototype, "maxZoom", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], TileGridComponent.prototype, "minZoom", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], TileGridComponent.prototype, "tileSize", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], TileGridComponent.prototype, "origin", void 0);
-    tslib_1.__decorate([
+    __decorate([
         Input()
     ], TileGridComponent.prototype, "resolutions", void 0);
-    TileGridComponent = tslib_1.__decorate([
+    TileGridComponent = __decorate([
         Component({
             selector: 'aol-tilegrid',
             template: ''

@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 /*
  * Public API Surface of ngx-openlayers
  */
@@ -154,7 +154,7 @@ const COMPONENTS = [
 ];
 let AngularOpenlayersModule = class AngularOpenlayersModule {
 };
-AngularOpenlayersModule = tslib_1.__decorate([
+AngularOpenlayersModule = __decorate([
     NgModule({
         declarations: COMPONENTS,
         imports: [CommonModule],

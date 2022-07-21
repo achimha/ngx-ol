@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
 import { Attribution } from 'ol/control';
 import { MapComponent } from '../map.component';
@@ -23,10 +23,10 @@ ControlAttributionComponent.ctorParameters = () => [
     { type: MapComponent },
     { type: ElementRef }
 ];
-tslib_1.__decorate([
+__decorate([
     Input()
 ], ControlAttributionComponent.prototype, "collapsible", void 0);
-ControlAttributionComponent = tslib_1.__decorate([
+ControlAttributionComponent = __decorate([
     Component({
         selector: 'aol-control-attribution',
         template: ``

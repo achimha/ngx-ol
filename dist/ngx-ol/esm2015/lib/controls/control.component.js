@@ -1,4 +1,4 @@
-import * as tslib_1 from "tslib";
+import { __decorate } from "tslib";
 import { Component, ContentChild } from '@angular/core';
 import { Control } from 'ol/control';
 import { MapComponent } from '../map.component';
@@ -24,10 +24,10 @@ let ControlComponent = class ControlComponent {
 ControlComponent.ctorParameters = () => [
     { type: MapComponent }
 ];
-tslib_1.__decorate([
+__decorate([
     ContentChild(ContentComponent, { static: true })
 ], ControlComponent.prototype, "content", void 0);
-ControlComponent = tslib_1.__decorate([
+ControlComponent = __decorate([
     Component({
         selector: 'aol-control',
         template: ` <ng-content></ng-content> `
