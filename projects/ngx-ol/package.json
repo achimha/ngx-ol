@@ -1,6 +1,6 @@
 {
   "name": "@achimha/ngx-ol",
-  "version": "9.0.1",
+  "version": "9.0.2",
   "private": false,
   "scripts": {
     "release": "standard-version -m \"chore(release): version %s\" -t \"\""
