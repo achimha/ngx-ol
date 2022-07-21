@@ -1,6 +1,0 @@
-/**
- * Generated bundle index. Do not edit.
- */
-export * from './public-api';
-export { FormatComponent as ɵa } from './lib/formats/format.component';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmd4LW9sLmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmd4LW9sLyIsInNvdXJjZXMiOlsibmd4LW9sLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsY0FBYyxjQUFjLENBQUM7QUFFN0IsT0FBTyxFQUFDLGVBQWUsSUFBSSxFQUFFLEVBQUMsTUFBTSxnQ0FBZ0MsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogR2VuZXJhdGVkIGJ1bmRsZSBpbmRleC4gRG8gbm90IGVkaXQuXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9wdWJsaWMtYXBpJztcblxuZXhwb3J0IHtGb3JtYXRDb21wb25lbnQgYXMgybVhfSBmcm9tICcuL2xpYi9mb3JtYXRzL2Zvcm1hdC5jb21wb25lbnQnOyJdfQ==

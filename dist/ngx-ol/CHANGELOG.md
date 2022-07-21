@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.0.2](https://github.com/achimha/ngx-ol/compare/1.0.0-next.20...9.0.2) (2022-07-21)
+
 ## [1.0.0-next.20](https://github.com/achimha/ngx-ol/compare/1.0.0-next.19...1.0.0-next.20) (2022-07-19)
 
 <a name="1.0.0-next.19"></a>

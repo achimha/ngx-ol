@@ -13,15 +13,6 @@
     "format": "prettier --write \"**/@(src|e2e)/**/*.ts\"",
     "release": "yarn --cwd projects/ngx-ol release"
   },
-  "main": "dist/ngx-ol/bundles/ngx-ol.umd.js",
-  "typings": "dist/ngx-ol/ngx-ol.d.ts",
-  "module": "dist/ngx-ol/fesm5/ngx-ol.js",
-  "es2015": "dist/ngx-ol/fesm2015/ngx-ol.js",
-  "esm5": "dist/ngx-ol/esm5/ngx-ol.js",
-  "esm2015": "dist/ngx-ol/esm2015/ngx-ol.js",
-  "fesm5": "dist/ngx-ol/fesm5/ngx-ol.js",
-  "fesm2015": "dist/ngx-ol/fesm2015/ngx-ol.js",
-  "metadata": "dist/ngx-ol/ngx-ol.metadata.json",
   "private": false,
   "dependencies": {
     "@angular/animations": "^9.1.13",

@@ -1,26 +1,42 @@
 {
-  "name": "ngx-ol",
-  "version": "9.0.1",
+  "name": "@achimha/ngx-ol",
+  "version": "9.0.4",
+  "description": "Openlayers Angular framework",
+  "author": "Achim Hasenmueller (achim.hasenmueller@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/achimha/ngx-ol.git"
+  },
+  "bugs": {
+    "url": "https://github.com/achimha/ngx-ol/issues"
+  },
+  "homepage": "https://github.com/achimha/ngx-ol",
+  "keywords": [
+    "angular",
+    "openlayers"
+  ],
+  "license": "MPL-2.0",
+  "private": false,
   "standard-version": {
     "postchangelog": "cp projects/ngx-ol/CHANGELOG.md dist/ngx-ol/CHANGELOG.md"
   },
   "peerDependencies": {
-    "@angular/common": ">=6.0.0 <=9.x.x",
-    "@angular/core": ">=6.0.0 <=9.x.x",
+    "@angular/common": "^9.0.0",
+    "@angular/core": "^9.0.0",
     "ol": "^6.15.1",
     "tslib": "^1.10.0"
   },
-  "main": "bundles/ngx-ol.umd.js",
-  "module": "fesm5/ngx-ol.js",
-  "es2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/ngx-ol.js",
-  "es2015": "fesm2015/ngx-ol.js",
-  "esm5": "esm5/ngx-ol.js",
-  "esm2015": "esm2015/ngx-ol.js",
-  "fesm5": "fesm5/ngx-ol.js",
-  "fesm2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/ngx-ol.js",
-  "fesm2015": "fesm2015/ngx-ol.js",
-  "typings": "ngx-ol.d.ts",
-  "metadata": "ngx-ol.metadata.json",
+  "main": "bundles/achimha-ngx-ol.umd.js",
+  "module": "fesm5/achimha-ngx-ol.js",
+  "es2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/achimha-ngx-ol.js",
+  "es2015": "fesm2015/achimha-ngx-ol.js",
+  "esm5": "esm5/achimha-ngx-ol.js",
+  "esm2015": "esm2015/achimha-ngx-ol.js",
+  "fesm5": "fesm5/achimha-ngx-ol.js",
+  "fesm2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/achimha-ngx-ol.js",
+  "fesm2015": "fesm2015/achimha-ngx-ol.js",
+  "typings": "achimha-ngx-ol.d.ts",
+  "metadata": "achimha-ngx-ol.metadata.json",
   "sideEffects": false,
   "__processed_by_ivy_ngcc__": {
     "es2015": "9.1.13",
