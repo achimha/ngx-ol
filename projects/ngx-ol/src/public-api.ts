@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ngx-openlayers
+ * Public API Surface of ngx-ol
  */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';

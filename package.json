@@ -22,7 +22,7 @@
   "fesm5": "dist/ngx-ol/fesm5/ngx-ol.js",
   "fesm2015": "dist/ngx-ol/fesm2015/ngx-ol.js",
   "metadata": "dist/ngx-ol/ngx-ol.metadata.json",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^9.1.13",
     "@angular/common": "^9.1.13",

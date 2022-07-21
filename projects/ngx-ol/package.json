@@ -1,8 +1,9 @@
 {
-  "name": "ngx-ol",
+  "name": "@achimha/ngx-ol",
   "version": "9.0.1",
+  "private": false,
   "scripts": {
-    "release": "standard-version -m \"chore(release): version %s\" -t \"\" --prerelease next"
+    "release": "standard-version -m \"chore(release): version %s\" -t \"\""
   },
   "standard-version": {
     "postchangelog": "cp projects/ngx-ol/CHANGELOG.md dist/ngx-ol/CHANGELOG.md"

@@ -31,8 +31,8 @@ jobs:
     if: tag =~ /^\d+.\d+.\d+-next.\d+$/
     script: 'true' # skips tests
     before_deploy:
-    - cd dist/ngx-openlayers-publish
-    - cp ../../projects/ngx-openlayers/CHANGELOG.md CHANGELOG.md
+    - cd dist/ngx-ol-publish
+    - cp ../../projects/ngx-ol/CHANGELOG.md CHANGELOG.md
     - npm pack
     deploy:
     - provider: releases
@@ -49,10 +49,10 @@ jobs:
     if: tag =~ /^\d+.\d+.\d+-next.\d+$/
     script: 'true' # skips tests
     before_deploy:
-    - cd dist/demo-ngx-openlayers
+    - cd dist/demo-ngx-ol
     deploy:
     - provider: pages
-      local_dir: dist/demo-ngx-openlayers
+      local_dir: dist/demo-ngx-ol
       skip_cleanup: true
       github_token: $GITHUB_OAUTH_TOKEN
       on:
@@ -63,8 +63,8 @@ jobs:
     if: tag =~ /^\d+.\d+.\d+-next.\d+$/
     script: 'true' # skips tests
     before_deploy:
-    - cp projects/ngx-openlayers/CHANGELOG.md dist/ngx-openlayers-publish/CHANGELOG.md
-    - cd dist/ngx-openlayers-publish
+    - cp projects/ngx-ol/CHANGELOG.md dist/ngx-ol-publish/CHANGELOG.md
+    - cd dist/ngx-ol-publish
     deploy:
     - provider: npm
       email: $NPM_EMAIL
