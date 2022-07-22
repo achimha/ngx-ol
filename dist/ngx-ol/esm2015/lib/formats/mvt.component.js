@@ -1,32 +1,24 @@
-var FormatMVTComponent_1;
-import { __decorate } from "tslib";
 import { Component, forwardRef, Input } from '@angular/core';
 import { FormatComponent } from './format.component';
 import { MVT } from 'ol/format';
-let FormatMVTComponent = FormatMVTComponent_1 = class FormatMVTComponent extends FormatComponent {
+export class FormatMVTComponent extends FormatComponent {
     constructor() {
         super();
         this.instance = new MVT(this);
     }
+}
+FormatMVTComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'aol-format-mvt',
+                template: '',
+                providers: [{ provide: FormatComponent, useExisting: forwardRef(() => FormatMVTComponent) }]
+            },] }
+];
+FormatMVTComponent.ctorParameters = () => [];
+FormatMVTComponent.propDecorators = {
+    featureClass: [{ type: Input }],
+    geometryName: [{ type: Input }],
+    layerName: [{ type: Input }],
+    layers: [{ type: Input }]
 };
-__decorate([
-    Input()
-], FormatMVTComponent.prototype, "featureClass", void 0);
-__decorate([
-    Input()
-], FormatMVTComponent.prototype, "geometryName", void 0);
-__decorate([
-    Input()
-], FormatMVTComponent.prototype, "layerName", void 0);
-__decorate([
-    Input()
-], FormatMVTComponent.prototype, "layers", void 0);
-FormatMVTComponent = FormatMVTComponent_1 = __decorate([
-    Component({
-        selector: 'aol-format-mvt',
-        template: '',
-        providers: [{ provide: FormatComponent, useExisting: forwardRef(() => FormatMVTComponent_1) }]
-    })
-], FormatMVTComponent);
-export { FormatMVTComponent };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibXZ0LmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BhY2hpbWhhL25neC1vbC8iLCJzb3VyY2VzIjpbImxpYi9mb3JtYXRzL212dC5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFFLFVBQVUsRUFBRSxLQUFLLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFDN0QsT0FBTyxFQUFFLGVBQWUsRUFBRSxNQUFNLG9CQUFvQixDQUFDO0FBQ3JELE9BQU8sRUFBRSxHQUFHLEVBQUUsTUFBTSxXQUFXLENBQUM7QUFRaEMsSUFBYSxrQkFBa0IsMEJBQS9CLE1BQWEsa0JBQW1CLFNBQVEsZUFBZTtJQVlyRDtRQUNFLEtBQUssRUFBRSxDQUFDO1FBQ1IsSUFBSSxDQUFDLFFBQVEsR0FBRyxJQUFJLEdBQUcsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUNoQyxDQUFDO0NBQ0YsQ0FBQTtBQVpDO0lBREMsS0FBSyxFQUFFO3dEQUNtQjtBQUUzQjtJQURDLEtBQUssRUFBRTt3REFDYTtBQUVyQjtJQURDLEtBQUssRUFBRTtxREFDVTtBQUVsQjtJQURDLEtBQUssRUFBRTtrREFDUztBQVZOLGtCQUFrQjtJQUw5QixTQUFTLENBQUM7UUFDVCxRQUFRLEVBQUUsZ0JBQWdCO1FBQzFCLFFBQVEsRUFBRSxFQUFFO1FBQ1osU0FBUyxFQUFFLENBQUMsRUFBRSxPQUFPLEVBQUUsZUFBZSxFQUFFLFdBQVcsRUFBRSxVQUFVLENBQUMsR0FBRyxFQUFFLENBQUMsb0JBQWtCLENBQUMsRUFBRSxDQUFDO0tBQzdGLENBQUM7R0FDVyxrQkFBa0IsQ0FnQjlCO1NBaEJZLGtCQUFrQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgZm9yd2FyZFJlZiwgSW5wdXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IEZvcm1hdENvbXBvbmVudCB9IGZyb20gJy4vZm9ybWF0LmNvbXBvbmVudCc7XG5pbXBvcnQgeyBNVlQgfSBmcm9tICdvbC9mb3JtYXQnO1xuaW1wb3J0IHsgRmVhdHVyZUNsYXNzIH0gZnJvbSAnb2wvRmVhdHVyZSc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2FvbC1mb3JtYXQtbXZ0JyxcbiAgdGVtcGxhdGU6ICcnLFxuICBwcm92aWRlcnM6IFt7IHByb3ZpZGU6IEZvcm1hdENvbXBvbmVudCwgdXNlRXhpc3Rpbmc6IGZvcndhcmRSZWYoKCkgPT4gRm9ybWF0TVZUQ29tcG9uZW50KSB9XSxcbn0pXG5leHBvcnQgY2xhc3MgRm9ybWF0TVZUQ29tcG9uZW50IGV4dGVuZHMgRm9ybWF0Q29tcG9uZW50IHtcbiAgaW5zdGFuY2U6IE1WVDtcblxuICBASW5wdXQoKVxuICBmZWF0dXJlQ2xhc3M6IEZlYXR1cmVDbGFzcztcbiAgQElucHV0KClcbiAgZ2VvbWV0cnlOYW1lOiBzdHJpbmc7XG4gIEBJbnB1dCgpXG4gIGxheWVyTmFtZTogc3RyaW5nO1xuICBASW5wdXQoKVxuICBsYXllcnM6IHN0cmluZ1tdO1xuXG4gIGNvbnN0cnVjdG9yKCkge1xuICAgIHN1cGVyKCk7XG4gICAgdGhpcy5pbnN0YW5jZSA9IG5ldyBNVlQodGhpcyk7XG4gIH1cbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibXZ0LmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvYWNoaW1oYS9Qcm9qZWN0cy9uZ3gtb2wvcHJvamVjdHMvbmd4LW9sL3NyYy8iLCJzb3VyY2VzIjpbImxpYi9mb3JtYXRzL212dC5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxVQUFVLEVBQUUsS0FBSyxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQzdELE9BQU8sRUFBRSxlQUFlLEVBQUUsTUFBTSxvQkFBb0IsQ0FBQztBQUNyRCxPQUFPLEVBQUUsR0FBRyxFQUFFLE1BQU0sV0FBVyxDQUFDO0FBUWhDLE1BQU0sT0FBTyxrQkFBbUIsU0FBUSxlQUFlO0lBWXJEO1FBQ0UsS0FBSyxFQUFFLENBQUM7UUFDUixJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksR0FBRyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ2hDLENBQUM7OztZQXBCRixTQUFTLFNBQUM7Z0JBQ1QsUUFBUSxFQUFFLGdCQUFnQjtnQkFDMUIsUUFBUSxFQUFFLEVBQUU7Z0JBQ1osU0FBUyxFQUFFLENBQUMsRUFBRSxPQUFPLEVBQUUsZUFBZSxFQUFFLFdBQVcsRUFBRSxVQUFVLENBQUMsR0FBRyxFQUFFLENBQUMsa0JBQWtCLENBQUMsRUFBRSxDQUFDO2FBQzdGOzs7OzJCQUlFLEtBQUs7MkJBRUwsS0FBSzt3QkFFTCxLQUFLO3FCQUVMLEtBQUsiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIGZvcndhcmRSZWYsIElucHV0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBGb3JtYXRDb21wb25lbnQgfSBmcm9tICcuL2Zvcm1hdC5jb21wb25lbnQnO1xuaW1wb3J0IHsgTVZUIH0gZnJvbSAnb2wvZm9ybWF0JztcbmltcG9ydCB7IEZlYXR1cmVDbGFzcyB9IGZyb20gJ29sL0ZlYXR1cmUnO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdhb2wtZm9ybWF0LW12dCcsXG4gIHRlbXBsYXRlOiAnJyxcbiAgcHJvdmlkZXJzOiBbeyBwcm92aWRlOiBGb3JtYXRDb21wb25lbnQsIHVzZUV4aXN0aW5nOiBmb3J3YXJkUmVmKCgpID0+IEZvcm1hdE1WVENvbXBvbmVudCkgfV0sXG59KVxuZXhwb3J0IGNsYXNzIEZvcm1hdE1WVENvbXBvbmVudCBleHRlbmRzIEZvcm1hdENvbXBvbmVudCB7XG4gIGluc3RhbmNlOiBNVlQ7XG5cbiAgQElucHV0KClcbiAgZmVhdHVyZUNsYXNzOiBGZWF0dXJlQ2xhc3M7XG4gIEBJbnB1dCgpXG4gIGdlb21ldHJ5TmFtZTogc3RyaW5nO1xuICBASW5wdXQoKVxuICBsYXllck5hbWU6IHN0cmluZztcbiAgQElucHV0KClcbiAgbGF5ZXJzOiBzdHJpbmdbXTtcblxuICBjb25zdHJ1Y3RvcigpIHtcbiAgICBzdXBlcigpO1xuICAgIHRoaXMuaW5zdGFuY2UgPSBuZXcgTVZUKHRoaXMpO1xuICB9XG59XG4iXX0=
