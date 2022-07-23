@@ -7,6 +7,9 @@ import { Vector } from 'ol/source';
 import { ModifyEvent } from 'ol/interaction/Modify';
 import { StyleFunction } from 'ol/style/Style';
 import { Condition } from 'ol/events/condition';
+import { ObjectEvent } from 'ol/Object';
+import { DrawEvent } from 'ol/interaction/Draw';
+import BaseEvent from 'ol/events/Event';
 
 @Component({
   selector: 'aol-interaction-modify',
@@ -31,25 +34,28 @@ export class ModifyInteractionComponent implements OnInit, OnDestroy {
   source?: Vector;
 
   @Output()
-  modifyEnd = new EventEmitter<ModifyEvent>();
+  olChange = new EventEmitter<DrawEvent>();
   @Output()
-  modifyStart = new EventEmitter<ModifyEvent>();
+  olChangeActive = new EventEmitter<ObjectEvent>();
   @Output()
-  olChange = new EventEmitter<ModifyEvent>();
+  olError = new EventEmitter<BaseEvent>();
   @Output()
-  olChangeActive = new EventEmitter<ModifyEvent>();
+  olModifyEnd = new EventEmitter<ModifyEvent>();
   @Output()
-  propertyChange = new EventEmitter<ModifyEvent>();
+  olModifyStart = new EventEmitter<ModifyEvent>();
+  @Output()
+  propertyChange = new EventEmitter<ObjectEvent>();
 
   constructor(private map: MapComponent) {}
 
   ngOnInit() {
     this.instance = new Modify(this);
-    this.instance.on('change', (event: ModifyEvent) => this.olChange.emit(event));
-    // TODO this.instance.on('change:active', (event: ModifyEvent) => this.olChangeActive.emit(event));
-    // TODO this.instance.on('propertychange', (event: ModifyEvent) => this.propertyChange.emit(event));
-    this.instance.on('modifyend', (event: ModifyEvent) => this.modifyEnd.emit(event));
-    this.instance.on('modifystart', (event: ModifyEvent) => this.modifyStart.emit(event));
+    this.instance.on('change', (event: DrawEvent) => this.olChange.emit(event));
+    this.instance.on('change:active', (event: ObjectEvent) => this.olChangeActive.emit(event));
+    this.instance.on('error', (event: BaseEvent) => this.olError.emit(event));
+    this.instance.on('modifyend', (event: ModifyEvent) => this.olModifyEnd.emit(event));
+    this.instance.on('modifystart', (event: ModifyEvent) => this.olModifyStart.emit(event));
+    this.instance.on('propertychange', (event: ObjectEvent) => this.propertyChange.emit(event));
     this.map.instance.addInteraction(this.instance);
   }
 

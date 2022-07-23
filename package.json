@@ -55,6 +55,7 @@
     "tslint-config-prettier": "^1.13.0",
     "tslint-plugin-prettier": "^2.3.0",
     "typescript": "~4.0.8",
-    "@types/topojson-specification": "^1.0.2"
+    "@types/topojson-specification": "^1.0.2",
+    "@types/arcgis-rest-api": "^10.4.5"
   }
 }

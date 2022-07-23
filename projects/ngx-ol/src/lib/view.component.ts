@@ -4,6 +4,8 @@ import { MapComponent } from './map.component';
 import { ObjectEvent } from 'ol/Object';
 import { Extent } from 'ol/extent';
 import { Coordinate } from 'ol/coordinate';
+import { DrawEvent } from 'ol/interaction/Draw';
+import BaseEvent from 'ol/events/Event';
 
 @Component({
   selector: 'aol-view',
@@ -58,11 +60,17 @@ export class ViewComponent implements OnInit, OnChanges, OnDestroy {
   zoomAnimation = false;
 
   @Output()
-  changeZoom: EventEmitter<ObjectEvent> = new EventEmitter<ObjectEvent>();
+  olChange = new EventEmitter<DrawEvent>();
   @Output()
-  changeResolution: EventEmitter<ObjectEvent> = new EventEmitter<ObjectEvent>();
+  changeCenter = new EventEmitter<ObjectEvent>();
   @Output()
-  changeCenter: EventEmitter<ObjectEvent> = new EventEmitter<ObjectEvent>();
+  changeResolution = new EventEmitter<ObjectEvent>();
+  @Output()
+  changeRotation = new EventEmitter<ObjectEvent>();
+  @Output()
+  olError = new EventEmitter<BaseEvent>();
+  @Output()
+  propertyChange = new EventEmitter<ObjectEvent>();
 
   constructor(private host: MapComponent) {}
 
@@ -71,9 +79,12 @@ export class ViewComponent implements OnInit, OnChanges, OnDestroy {
     this.instance = new View(this);
     this.host.instance.setView(this.instance);
 
-    // TODO this.instance.on('change:zoom', (event: ObjectEvent) => this.changeZoom.emit(event));
-    this.instance.on('change:resolution', (event: ObjectEvent) => this.changeResolution.emit(event));
+    this.instance.on('change', (event: DrawEvent) => this.olChange.emit(event));
     this.instance.on('change:center', (event: ObjectEvent) => this.changeCenter.emit(event));
+    this.instance.on('change:resolution', (event: ObjectEvent) => this.changeResolution.emit(event));
+    this.instance.on('change:rotation', (event: ObjectEvent) => this.changeRotation.emit(event));
+    this.instance.on('error', (event: BaseEvent) => this.olError.emit(event));
+    this.instance.on('propertychange', (event: ObjectEvent) => this.propertyChange.emit(event));
   }
 
   ngOnChanges(changes: SimpleChanges) {

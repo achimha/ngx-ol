@@ -4,6 +4,8 @@ import { Collection, Feature } from 'ol';
 import { Layer } from 'ol/layer';
 import { TranslateEvent } from 'ol/interaction/Translate';
 import { MapComponent } from '../map.component';
+import BaseEvent from 'ol/events/Event';
+import { ObjectEvent } from 'ol/Object';
 
 @Component({
   selector: 'aol-interaction-translate',
@@ -20,29 +22,30 @@ export class TranslateInteractionComponent implements OnInit, OnDestroy {
   hitTolerance?: number;
 
   @Output()
-  olChange: EventEmitter<TranslateEvent>;
+  olChange = new EventEmitter<BaseEvent>();
   @Output()
-  propertyChange: EventEmitter<TranslateEvent>;
+  olChangeActive = new EventEmitter<ObjectEvent>();
   @Output()
-  translateEnd: EventEmitter<TranslateEvent>;
+  olError = new EventEmitter<BaseEvent>();
   @Output()
-  translateStart: EventEmitter<TranslateEvent>;
+  propertyChange = new EventEmitter<ObjectEvent>();
   @Output()
-  translating: EventEmitter<TranslateEvent>;
+  translateEnd = new EventEmitter<TranslateEvent>();
+  @Output()
+  translateStart = new EventEmitter<TranslateEvent>();
+  @Output()
+  translating = new EventEmitter<TranslateEvent>();
 
   constructor(private map: MapComponent) {
-    this.olChange = new EventEmitter<TranslateEvent>();
-    this.propertyChange = new EventEmitter<TranslateEvent>();
-    this.translateEnd = new EventEmitter<TranslateEvent>();
-    this.translateStart = new EventEmitter<TranslateEvent>();
-    this.translating = new EventEmitter<TranslateEvent>();
   }
 
   ngOnInit() {
     this.instance = new Translate(this);
 
-    this.instance.on('change', (event: TranslateEvent) => this.olChange.emit(event));
-    // TODO this.instance.on('propertychange', (event: TranslateEvent) => this.propertyChange.emit(event));
+    this.instance.on('change', (event: BaseEvent) => this.olChange.emit(event));
+    this.instance.on('change:active', (event: ObjectEvent) => this.olChangeActive.emit(event));
+    this.instance.on('error', (event: BaseEvent) => this.olError.emit(event));
+    this.instance.on('propertychange', (event: ObjectEvent) => this.propertyChange.emit(event));
     this.instance.on('translateend', (event: TranslateEvent) => this.translateEnd.emit(event));
     this.instance.on('translatestart', (event: TranslateEvent) => this.translateStart.emit(event));
     this.instance.on('translating', (event: TranslateEvent) => this.translating.emit(event));

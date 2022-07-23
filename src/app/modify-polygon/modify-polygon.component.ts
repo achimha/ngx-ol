@@ -68,7 +68,7 @@ export class ModifyPolygonComponent implements OnInit {
   displayProj = new Projection({ code: 'EPSG:3857' });
   inputProj = new Projection({ code: 'EPSG:4326' });
 
-  feature: Feature = {
+  feature = {
     geometry: {
       coordinates: [
         [
@@ -91,6 +91,6 @@ export class ModifyPolygonComponent implements OnInit {
     this.feature = this.format.writeFeatureObject(feature, {
       dataProjection: this.inputProj,
       featureProjection: this.displayProj,
-    });
+    }) as any;
   }
 }

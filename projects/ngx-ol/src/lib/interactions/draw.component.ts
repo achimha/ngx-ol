@@ -8,6 +8,8 @@ import { DrawEvent, GeometryFunction } from 'ol/interaction/Draw';
 import { StyleFunction } from 'ol/style/Style';
 import { Condition } from 'ol/events/condition';
 import { Type } from 'ol/geom/Geometry';
+import { ObjectEvent } from 'ol/Object';
+import BaseEvent from 'ol/events/Event';
 
 @Component({
   selector: 'aol-interaction-draw',
@@ -50,23 +52,29 @@ export class DrawInteractionComponent implements OnInit, OnDestroy {
   @Output()
   olChange = new EventEmitter<DrawEvent>();
   @Output()
-  olChangeActive = new EventEmitter<DrawEvent>();
+  olChangeActive = new EventEmitter<ObjectEvent>();
+  @Output()
+  olDrawAbort = new EventEmitter<DrawEvent>();
   @Output()
   drawEnd = new EventEmitter<DrawEvent>();
   @Output()
   drawStart = new EventEmitter<DrawEvent>();
   @Output()
-  propertyChange = new EventEmitter<DrawEvent>();
+  olError = new EventEmitter<BaseEvent>();
+  @Output()
+  propertyChange = new EventEmitter<ObjectEvent>();
 
   constructor(private map: MapComponent) {}
 
   ngOnInit() {
     this.instance = new Draw(this);
     this.instance.on('change', (event: DrawEvent) => this.olChange.emit(event));
-    // TODO this.instance.on('change:active', (event: DrawEvent) => this.olChangeActive.emit(event));
+    this.instance.on('change:active', (event: ObjectEvent) => this.olChangeActive.emit(event));
+    this.instance.on('drawabort', (event: DrawEvent) => this.olDrawAbort.emit(event));
     this.instance.on('drawend', (event: DrawEvent) => this.drawEnd.emit(event));
     this.instance.on('drawstart', (event: DrawEvent) => this.drawStart.emit(event));
-    // TODO this.instance.on('propertychange', (event: DrawEvent) => this.propertyChange.emit(event));
+    this.instance.on('error', (event: BaseEvent) => this.olError.emit(event));
+    this.instance.on('propertychange', (event: ObjectEvent) => this.propertyChange.emit(event));
     this.map.instance.addInteraction(this.instance);
   }
 

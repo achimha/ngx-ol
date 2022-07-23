@@ -4,6 +4,7 @@ import Source from 'ol/source/Source';
 import { LayerComponent } from '../layers/layer.component';
 
 @Directive()
+// tslint:disable-next-line:directive-class-suffix
 export abstract class SourceComponent implements OnDestroy {
   public instance: Source;
   public componentType = 'source';

@@ -7,6 +7,8 @@ import { Collection, Feature } from 'ol';
 import { SelectEvent, FilterFunction } from 'ol/interaction/Select';
 import { StyleFunction } from 'ol/style/Style';
 import { Condition } from 'ol/events/condition';
+import { ObjectEvent } from 'ol/Object';
+import BaseEvent from 'ol/events/Event';
 
 @Component({
   selector: 'aol-interaction-select',
@@ -39,9 +41,13 @@ export class SelectInteractionComponent implements OnInit, OnDestroy {
   @Output()
   olChange = new EventEmitter<SelectEvent>();
   @Output()
-  olSelect = new EventEmitter<SelectEvent>();
+  olChangeActive = new EventEmitter<ObjectEvent>();
   @Output()
-  propertyChange = new EventEmitter<SelectEvent>();
+  olError = new EventEmitter<BaseEvent>();
+  @Output()
+  propertyChange = new EventEmitter<ObjectEvent>();
+  @Output()
+  olSelect = new EventEmitter<SelectEvent>();
 
   constructor(private map: MapComponent) {}
 
@@ -49,9 +55,10 @@ export class SelectInteractionComponent implements OnInit, OnDestroy {
     this.instance = new Select(this);
 
     this.instance.on('change', (event: SelectEvent) => this.olChange.emit(event));
+    this.instance.on('change:active', (event: ObjectEvent) => this.olChangeActive.emit(event));
+    this.instance.on('error', (event: BaseEvent) => this.olError.emit(event));
+    this.instance.on('propertychange', (event: ObjectEvent) => this.propertyChange.emit(event));
     this.instance.on('select', (event: SelectEvent) => this.olSelect.emit(event));
-    // TODO this.instance.on('propertychange', (event: SelectEvent) => this.propertyChange.emit(event));
-
     this.map.instance.addInteraction(this.instance);
   }
 
