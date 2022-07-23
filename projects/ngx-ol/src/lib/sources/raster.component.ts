@@ -35,9 +35,9 @@ export class SourceRasterComponent extends SourceComponent implements AfterConte
   operationType?: 'pixel' | 'image';
 
   @Output()
-  beforeOperations: EventEmitter<RasterSourceEvent> = new EventEmitter<RasterSourceEvent>();
+  beforeOperations = new EventEmitter<RasterSourceEvent>();
   @Output()
-  afterOperations: EventEmitter<RasterSourceEvent> = new EventEmitter<RasterSourceEvent>();
+  afterOperations = new EventEmitter<RasterSourceEvent>();
 
   instance: Raster;
   sources: Source[] = [];

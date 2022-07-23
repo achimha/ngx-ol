@@ -33,11 +33,11 @@ export class SourceOsmComponent extends SourceXYZComponent implements AfterConte
   wrapX: boolean;
 
   @Output()
-  tileLoadStart: EventEmitter<TileSourceEvent> = new EventEmitter<TileSourceEvent>();
+  tileLoadStart = new EventEmitter<TileSourceEvent>();
   @Output()
-  tileLoadEnd: EventEmitter<TileSourceEvent> = new EventEmitter<TileSourceEvent>();
+  tileLoadEnd = new EventEmitter<TileSourceEvent>();
   @Output()
-  tileLoadError: EventEmitter<TileSourceEvent> = new EventEmitter<TileSourceEvent>();
+  tileLoadError = new EventEmitter<TileSourceEvent>();
 
   instance: OSM;
 
