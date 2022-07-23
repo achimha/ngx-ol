@@ -1,6 +1,6 @@
 {
   "name": "@achimha/ngx-ol",
-  "version": "9.0.4",
+  "version": "9.0.6",
   "description": "Openlayers Angular framework",
   "author": "Achim Hasenmueller (achim.hasenmueller@gmail.com)",
   "repository": {
@@ -18,7 +18,8 @@
   "license": "MPL-2.0",
   "private": false,
   "scripts": {
-    "release": "standard-version -m \"chore(release): version %s\" -t \"\""
+    "release": "standard-version -m \"chore(release): version %s\" -t \"\"",
+    "prepublishOnly": "cp projects/ngx-ol/README.md dist/ngx-ol/README.md"
   },
   "standard-version": {
     "postchangelog": "cp projects/ngx-ol/CHANGELOG.md dist/ngx-ol/CHANGELOG.md"
@@ -27,8 +28,8 @@
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "^10.0.0",
-    "@angular/core": "^10.0.0",
+    "@angular/common": ">=9.0.0",
+    "@angular/core": ">=9.0.0",
     "ol": "^6.15.1"
   }
 }
