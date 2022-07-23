@@ -27,7 +27,6 @@ import { SourceComponent } from './source.component';
   providers: [{ provide: SourceComponent, useExisting: forwardRef(() => SourceXYZComponent) }],
 })
 export class SourceXYZComponent extends SourceComponent implements AfterContentInit, OnChanges {
-  instance: XYZ;
   @Input()
   cacheSize: number;
   @Input()
@@ -69,6 +68,8 @@ export class SourceXYZComponent extends SourceComponent implements AfterContentI
   @Output()
   tileLoadError: EventEmitter<TileSourceEvent> = new EventEmitter<TileSourceEvent>();
 
+  instance: XYZ;
+
   constructor(
     @Optional()
     @Host()
@@ -109,6 +110,6 @@ export class SourceXYZComponent extends SourceComponent implements AfterContentI
     this.instance.on('tileloadend', (event: TileSourceEvent) => this.tileLoadEnd.emit(event));
     this.instance.on('tileloaderror', (event: TileSourceEvent) => this.tileLoadError.emit(event));
 
-    this._register(this.instance);
+    this.register(this.instance);
   }
 }

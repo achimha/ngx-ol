@@ -22,8 +22,6 @@ import { SourceVectorComponent } from './vector.component';
   providers: [{ provide: SourceComponent, useExisting: forwardRef(() => SourceClusterComponent) }],
 })
 export class SourceClusterComponent extends SourceComponent implements AfterContentInit, OnChanges {
-  instance: Cluster;
-
   @Input()
   distance: number;
   @Input()
@@ -33,6 +31,8 @@ export class SourceClusterComponent extends SourceComponent implements AfterCont
 
   @ContentChild(SourceVectorComponent, { static: false })
   sourceVectorComponent: SourceVectorComponent;
+
+  instance: Cluster;
   source: Vector;
 
   constructor(@Host() layer: LayerVectorComponent) {

@@ -7,12 +7,12 @@ import { MapComponent } from '../map.component';
   template: '',
 })
 export class PinchZoomInteractionComponent implements OnInit, OnDestroy {
-  instance: PinchZoom;
-
   @Input()
   duration: number;
   @Input()
   constrainResolution: boolean;
+
+  instance: PinchZoom;
 
   constructor(private map: MapComponent) {}
 

@@ -10,8 +10,6 @@ import { LoadFunction } from 'ol/Tile';
   providers: [{ provide: SourceComponent, useExisting: forwardRef(() => SourceBingmapsComponent) }],
 })
 export class SourceBingmapsComponent extends SourceComponent implements OnInit {
-  instance: BingMaps;
-
   @Input()
   cacheSize: number;
   @Input()
@@ -30,6 +28,8 @@ export class SourceBingmapsComponent extends SourceComponent implements OnInit {
   tileLoadFunction: LoadFunction;
   @Input()
   wrapX: boolean;
+
+  instance: BingMaps;
 
   constructor(@Host() layer: LayerTileComponent) {
     super(layer);

@@ -5,11 +5,8 @@ import { LayerGroupComponent } from './layergroup.component';
 import { Extent } from 'ol/extent';
 
 @Directive()
-// tslint:disable-next-line:directive-class-suffix
+// eslint-disable-next-line @angular-eslint/directive-class-suffix
 export abstract class LayerComponent implements OnInit, OnChanges, OnDestroy {
-  public instance: any;
-  public componentType = 'layer';
-
   @Input()
   opacity: number;
   @Input()
@@ -27,6 +24,9 @@ export abstract class LayerComponent implements OnInit, OnChanges, OnDestroy {
   prerender: (evt: Event) => void;
   @Input()
   postrender: (evt: Event) => void;
+
+  public instance: any;
+  public componentType = 'layer';
 
   protected constructor(protected host: MapComponent | LayerGroupComponent) {}
 

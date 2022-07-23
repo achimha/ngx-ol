@@ -12,8 +12,6 @@ import { ProjectionLike } from 'ol/proj';
   providers: [{ provide: SourceComponent, useExisting: forwardRef(() => SourceGeoJSONComponent) }],
 })
 export class SourceGeoJSONComponent extends SourceComponent implements OnInit {
-  instance: Vector;
-  format: FeatureFormat;
   @Input()
   defaultDataProjection: ProjectionLike;
   @Input()
@@ -22,6 +20,9 @@ export class SourceGeoJSONComponent extends SourceComponent implements OnInit {
   geometryName: string;
   @Input()
   url: string;
+
+  instance: Vector;
+  format: FeatureFormat;
 
   constructor(@Host() layer: LayerVectorComponent) {
     super(layer);

@@ -9,9 +9,6 @@ import { MapComponent } from '../map.component';
   template: ` <ng-content></ng-content> `,
 })
 export class GeometryCircleComponent extends SimpleGeometryComponent implements OnInit {
-  public componentType = 'geometry-circle';
-  public instance: Circle;
-
   @Input()
   get radius(): number {
     return this.instance.getRadius();
@@ -19,6 +16,9 @@ export class GeometryCircleComponent extends SimpleGeometryComponent implements 
   set radius(radius: number) {
     this.instance.setRadius(radius);
   }
+
+  public componentType = 'geometry-circle';
+  public instance: Circle;
 
   constructor(map: MapComponent, host: FeatureComponent) {
     super(map, host);

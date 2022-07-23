@@ -27,9 +27,6 @@ import BaseEvent from 'ol/events/Event';
   `,
 })
 export class MapComponent implements OnInit, AfterViewInit, OnChanges {
-  public instance: Map;
-  public componentType = 'map';
-
   @Input()
   width = '100%';
   @Input()
@@ -89,6 +86,9 @@ export class MapComponent implements OnInit, AfterViewInit, OnChanges {
   propertyChange: EventEmitter<ObjectEvent>;
   @Output()
   singleClick: EventEmitter<MapBrowserEvent<MouseEvent>>;
+
+  public instance: Map;
+  public componentType = 'map';
 
   // we pass empty arrays to not get default controls/interactions because we have our own directives
   controls: Control[] = [];

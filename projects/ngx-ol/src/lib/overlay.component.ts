@@ -8,9 +8,6 @@ import { ContentComponent } from './content.component';
   template: '<ng-content></ng-content>',
 })
 export class OverlayComponent implements OnInit, OnDestroy {
-  componentType = 'overlay';
-  instance: Overlay;
-  element: HTMLElement;
   @ContentChild(ContentComponent, { static: true })
   content: ContentComponent;
 
@@ -30,6 +27,10 @@ export class OverlayComponent implements OnInit, OnDestroy {
   autoPanAnimation: PanOptions;
   @Input()
   autoPanMargin: number;
+
+  componentType = 'overlay';
+  instance: Overlay;
+  element: HTMLElement;
 
   constructor(private map: MapComponent) {}
 

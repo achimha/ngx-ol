@@ -8,12 +8,12 @@ import { Condition } from 'ol/events/condition';
   template: '',
 })
 export class DragRotateAndZoomInteractionComponent implements OnInit, OnDestroy {
-  instance: DragRotateAndZoom;
-
   @Input()
   condition: Condition;
   @Input()
   duration: number;
+
+  instance: DragRotateAndZoom;
 
   constructor(private map: MapComponent) {}
 

@@ -23,8 +23,6 @@ import { ImageSourceEvent } from 'ol/source/Image';
   providers: [{ provide: SourceComponent, useExisting: forwardRef(() => SourceImageArcGISRestComponent) }],
 })
 export class SourceImageArcGISRestComponent extends SourceComponent implements OnInit, OnChanges {
-  instance: ImageArcGISRest;
-
   @Input() projection: ProjectionLike | string;
   @Input() url: string;
   @Input() attributions: AttributionLike;
@@ -41,6 +39,8 @@ export class SourceImageArcGISRestComponent extends SourceComponent implements O
   imageLoadEnd = new EventEmitter<ImageSourceEvent>();
   @Output()
   imageLoadError = new EventEmitter<ImageSourceEvent>();
+
+  instance: ImageArcGISRest;
 
   constructor(@Host() layer: LayerImageComponent) {
     super(layer);

@@ -12,7 +12,6 @@ import { MapComponent } from '../map.component';
   template: '',
 })
 export class DefaultControlComponent implements OnInit, OnDestroy {
-  instance: Collection<Control>;
   @Input()
   attribution: boolean;
   @Input()
@@ -25,6 +24,8 @@ export class DefaultControlComponent implements OnInit, OnDestroy {
   zoom: boolean;
   @Input()
   zoomOptions: ZoomOptions;
+
+  instance: Collection<Control>;
 
   constructor(private map: MapComponent) {}
 

@@ -15,7 +15,6 @@ import { UrlFunction } from 'ol/Tile';
   providers: [{ provide: SourceComponent, useExisting: forwardRef(() => SourceVectorTileComponent) }],
 })
 export class SourceVectorTileComponent extends SourceComponent implements AfterContentInit {
-  public instance: VectorTile;
   @Input()
   cacheSize: number;
   @Input()
@@ -35,9 +34,11 @@ export class SourceVectorTileComponent extends SourceComponent implements AfterC
 
   @ContentChild(FormatComponent, { static: false })
   formatComponent: FormatComponent;
-  format: Feature;
   @ContentChild(TileGridComponent, { static: false })
   tileGridComponent: TileGridComponent;
+
+  public instance: VectorTile;
+  format: Feature;
   tileGrid: TileGrid;
 
   constructor(@Host() layer: LayerVectorTileComponent) {

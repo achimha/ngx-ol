@@ -9,7 +9,6 @@ import { MapComponent } from '../map.component';
   template: ` <ng-content></ng-content> `,
 })
 export class ControlOverviewMapComponent implements OnInit, OnChanges, OnDestroy {
-  instance: OverviewMap;
   @Input()
   collapsed: boolean;
   @Input()
@@ -26,6 +25,8 @@ export class ControlOverviewMapComponent implements OnInit, OnChanges, OnDestroy
   tipLabel: string;
   @Input()
   view: View;
+
+  instance: OverviewMap;
 
   constructor(private map: MapComponent) {}
 

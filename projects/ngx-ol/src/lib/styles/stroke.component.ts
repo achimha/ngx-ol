@@ -11,10 +11,6 @@ import { ColorLike } from 'ol/colorlike';
   template: ` <div class="aol-style-stroke"></div> `,
 })
 export class StyleStrokeComponent implements OnInit, OnChanges {
-  public instance: Stroke;
-  /* the typings do not have the setters */
-  private host: /*StyleComponent|StyleCircleComponent|StyleTextComponent*/ any;
-
   @Input()
   color: Color | ColorLike;
   @Input()
@@ -27,6 +23,10 @@ export class StyleStrokeComponent implements OnInit, OnChanges {
   miterLimit: number;
   @Input()
   width: number;
+
+  public instance: Stroke;
+  /* the typings do not have the setters */
+  private readonly host: StyleComponent|StyleCircleComponent|StyleTextComponent;
 
   constructor(
     @Optional() styleHost: StyleComponent,
@@ -58,7 +58,7 @@ export class StyleStrokeComponent implements OnInit, OnChanges {
         this.host.instance.setStroke(this.instance);
         break;
       case 'style-circle':
-        this.host.stroke = this.instance;
+        (this.host as StyleCircleComponent).stroke = this.instance;
         // console.log('setting ol.style.circle instance\'s stroke:', this.host);
         break;
       default:

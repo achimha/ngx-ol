@@ -8,9 +8,6 @@ import { MapComponent } from './map.component';
   template: '<ng-content></ng-content>',
 })
 export class GraticuleComponent implements AfterContentInit, OnChanges, OnDestroy {
-  instance: any;
-  public componentType = 'graticule';
-
   @Input()
   strokeStyle: Stroke;
   @Input()
@@ -19,6 +16,9 @@ export class GraticuleComponent implements AfterContentInit, OnChanges, OnDestro
   lonLabelPosition: number;
   @Input()
   latLabelPosition: number;
+
+  instance: any;
+  public componentType = 'graticule';
 
   constructor(private map: MapComponent) {}
 

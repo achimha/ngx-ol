@@ -8,8 +8,6 @@ import { Extent } from 'ol/extent';
   template: ` <ng-content></ng-content> `,
 })
 export class ControlZoomToExtentComponent implements OnInit, OnDestroy {
-  instance: ZoomToExtent;
-
   @Input()
   className: string;
   @Input()
@@ -18,6 +16,8 @@ export class ControlZoomToExtentComponent implements OnInit, OnDestroy {
   tipLabel: string;
   @Input()
   extent: Extent;
+
+  instance: ZoomToExtent;
 
   constructor(private map: MapComponent) {
     // console.log('instancing aol-control-zoomtoextent');

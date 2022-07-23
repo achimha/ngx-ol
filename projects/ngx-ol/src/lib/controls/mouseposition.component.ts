@@ -9,11 +9,12 @@ import { ProjectionLike } from 'ol/proj';
   template: ``,
 })
 export class ControlMousePositionComponent implements OnInit, OnDestroy {
-  instance: MousePosition;
   @Input()
   coordinateFormat: CoordinateFormat;
   @Input()
   projection: ProjectionLike;
+
+  instance: MousePosition;
   target: HTMLElement;
 
   constructor(private map: MapComponent, private element: ElementRef) {}

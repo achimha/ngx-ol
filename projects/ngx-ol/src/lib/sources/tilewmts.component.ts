@@ -26,7 +26,6 @@ import { RequestEncoding } from 'ol/source/WMTS';
   providers: [{ provide: SourceComponent, useExisting: forwardRef(() => SourceTileWMTSComponent) }],
 })
 export class SourceTileWMTSComponent extends SourceComponent implements AfterContentInit, OnChanges {
-  instance: SourceWMTS;
   @Input()
   cacheSize?: number;
   @Input()
@@ -73,6 +72,8 @@ export class SourceTileWMTSComponent extends SourceComponent implements AfterCon
 
   @ContentChild(TileGridWMTSComponent, { static: false })
   tileGridWMTS: TileGridWMTSComponent;
+
+  instance: SourceWMTS;
 
   constructor(@Host() layer: LayerTileComponent) {
     super(layer);

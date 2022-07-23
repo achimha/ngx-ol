@@ -25,8 +25,6 @@ import { SourceComponent } from './source.component';
   ],
 })
 export class SourceRasterComponent extends SourceComponent implements AfterContentInit {
-  instance: Raster;
-
   @Input()
   operation?: Operation;
   @Input()
@@ -41,6 +39,7 @@ export class SourceRasterComponent extends SourceComponent implements AfterConte
   @Output()
   afterOperations: EventEmitter<RasterSourceEvent> = new EventEmitter<RasterSourceEvent>();
 
+  instance: Raster;
   sources: Source[] = [];
 
   @ContentChild(SourceComponent, { static: false })
@@ -64,6 +63,6 @@ export class SourceRasterComponent extends SourceComponent implements AfterConte
     this.instance = new Raster(this);
     this.instance.on('beforeoperations', (event: RasterSourceEvent) => this.beforeOperations.emit(event));
     this.instance.on('afteroperations', (event: RasterSourceEvent) => this.afterOperations.emit(event));
-    this._register(this.instance);
+    this.register(this.instance);
   }
 }

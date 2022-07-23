@@ -13,8 +13,6 @@ import { SourceXYZComponent } from './xyz.component';
   providers: [{ provide: SourceComponent, useExisting: forwardRef(() => SourceOsmComponent) }],
 })
 export class SourceOsmComponent extends SourceXYZComponent implements AfterContentInit {
-  instance: OSM;
-
   @Input()
   attributions: AttributionLike;
   @Input()
@@ -41,6 +39,8 @@ export class SourceOsmComponent extends SourceXYZComponent implements AfterConte
   @Output()
   tileLoadError: EventEmitter<TileSourceEvent> = new EventEmitter<TileSourceEvent>();
 
+  instance: OSM;
+
   constructor(
     @Optional()
     @Host()
@@ -53,12 +53,10 @@ export class SourceOsmComponent extends SourceXYZComponent implements AfterConte
     if (this.tileGridXYZ) {
       this.tileGrid = this.tileGridXYZ.instance;
     }
-
     this.instance = new OSM(this);
-
     this.instance.on('tileloadstart', (event: TileSourceEvent) => this.tileLoadStart.emit(event));
     this.instance.on('tileloadend', (event: TileSourceEvent) => this.tileLoadEnd.emit(event));
     this.instance.on('tileloaderror', (event: TileSourceEvent) => this.tileLoadError.emit(event));
-    this._register(this.instance);
+    this.register(this.instance);
   }
 }

@@ -9,8 +9,6 @@ import { FeatureClass } from 'ol/Feature';
   providers: [{ provide: FormatComponent, useExisting: forwardRef(() => FormatMVTComponent) }],
 })
 export class FormatMVTComponent extends FormatComponent {
-  instance: MVT;
-
   @Input()
   featureClass: FeatureClass;
   @Input()
@@ -19,6 +17,8 @@ export class FormatMVTComponent extends FormatComponent {
   layerName: string;
   @Input()
   layers: string[];
+
+  instance: MVT;
 
   constructor() {
     super();

@@ -16,8 +16,6 @@ import BaseEvent from 'ol/events/Event';
   template: '',
 })
 export class ModifyInteractionComponent implements OnInit, OnDestroy {
-  instance: Modify;
-
   @Input()
   condition?: Condition;
   @Input()
@@ -45,6 +43,8 @@ export class ModifyInteractionComponent implements OnInit, OnDestroy {
   olModifyStart = new EventEmitter<ModifyEvent>();
   @Output()
   propertyChange = new EventEmitter<ObjectEvent>();
+
+  instance: Modify;
 
   constructor(private map: MapComponent) {}
 

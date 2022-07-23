@@ -8,8 +8,6 @@ import { Condition } from 'ol/events/condition';
   template: '',
 })
 export class DragZoomInteractionComponent implements OnInit, OnDestroy {
-  instance: DragZoom;
-
   @Input()
   className: string;
   @Input()
@@ -18,6 +16,8 @@ export class DragZoomInteractionComponent implements OnInit, OnDestroy {
   duration: number;
   @Input()
   out: boolean;
+
+  instance: DragZoom;
 
   constructor(private map: MapComponent) {}
 

@@ -8,10 +8,10 @@ import { AttributionComponent } from './attribution.component';
   template: '<ng-content></ng-content>',
 })
 export class AttributionsComponent implements AfterViewInit {
-  instance: Array<string>;
-
   @ContentChildren(AttributionComponent)
   attributions: QueryList<AttributionComponent>;
+
+  instance: Array<string>;
 
   constructor(@Host() private source: SourceComponent) {}
 

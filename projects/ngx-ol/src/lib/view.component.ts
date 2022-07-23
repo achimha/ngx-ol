@@ -12,9 +12,6 @@ import BaseEvent from 'ol/events/Event';
   template: ` <ng-content></ng-content> `,
 })
 export class ViewComponent implements OnInit, OnChanges, OnDestroy {
-  public instance: View;
-  public componentType = 'view';
-
   @Input()
   constrainRotation: boolean | number;
   @Input()
@@ -71,6 +68,9 @@ export class ViewComponent implements OnInit, OnChanges, OnDestroy {
   olError = new EventEmitter<BaseEvent>();
   @Output()
   propertyChange = new EventEmitter<ObjectEvent>();
+
+  public instance: View;
+  public componentType = 'view';
 
   constructor(private host: MapComponent) {}
 

@@ -16,8 +16,6 @@ import BaseEvent from 'ol/events/Event';
   template: '',
 })
 export class DrawInteractionComponent implements OnInit, OnDestroy {
-  instance: Draw;
-
   @Input()
   clickTolerance?: number;
   @Input()
@@ -63,6 +61,8 @@ export class DrawInteractionComponent implements OnInit, OnDestroy {
   olError = new EventEmitter<BaseEvent>();
   @Output()
   propertyChange = new EventEmitter<ObjectEvent>();
+
+  instance: Draw;
 
   constructor(private map: MapComponent) {}
 

@@ -4,13 +4,13 @@ import Source from 'ol/source/Source';
 import { LayerComponent } from '../layers/layer.component';
 
 @Directive()
-// tslint:disable-next-line:directive-class-suffix
+// eslint-disable-next-line @angular-eslint/directive-class-suffix
 export abstract class SourceComponent implements OnDestroy {
-  public instance: Source;
-  public componentType = 'source';
-
   @Input()
   attributions: any;
+
+  public instance: Source;
+  public componentType = 'source';
 
   protected constructor(protected host: LayerComponent) {}
 
@@ -20,7 +20,7 @@ export abstract class SourceComponent implements OnDestroy {
     }
   }
 
-  protected _register(s: Source) {
+  protected register(s: Source) {
     if (this.host) {
       this.host.instance.setSource(s);
     }

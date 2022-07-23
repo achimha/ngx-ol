@@ -12,8 +12,6 @@ import { ObjectEvent } from 'ol/Object';
   template: '',
 })
 export class TranslateInteractionComponent implements OnInit, OnDestroy {
-  instance: Translate;
-
   @Input()
   features?: Collection<Feature>;
   @Input()
@@ -35,6 +33,8 @@ export class TranslateInteractionComponent implements OnInit, OnDestroy {
   translateStart = new EventEmitter<TranslateEvent>();
   @Output()
   translating = new EventEmitter<TranslateEvent>();
+
+  instance: Translate;
 
   constructor(private map: MapComponent) {
   }

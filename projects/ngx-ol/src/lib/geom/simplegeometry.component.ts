@@ -4,12 +4,12 @@ import { MapComponent } from '../map.component';
 import SimpleGeometry from 'ol/geom/SimpleGeometry';
 
 @Directive()
-// tslint:disable-next-line:directive-class-suffix
+// eslint-disable-next-line @angular-eslint/directive-class-suffix
 export abstract class SimpleGeometryComponent implements OnInit {
+  @Input() srid: string;
+
   public instance: SimpleGeometry;
   public componentType = 'simple-geometry';
-
-  @Input() srid: string;
 
   protected constructor(protected map: MapComponent, protected host: FeatureComponent) {}
 

@@ -11,15 +11,15 @@ import { OverlayComponent } from './overlay.component';
   template: ` <div class="aol-coordinate"></div> `,
 })
 export class CoordinateComponent implements OnChanges, OnInit {
-  private host: any;
-  private mapSrid = 'EPSG:3857';
-
   @Input()
   x: number;
   @Input()
   y: number;
   @Input()
   srid = 'EPSG:3857';
+
+  private host: any;
+  private mapSrid = 'EPSG:3857';
 
   constructor(
     private map: MapComponent,

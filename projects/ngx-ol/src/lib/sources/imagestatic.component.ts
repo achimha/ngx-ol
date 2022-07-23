@@ -25,8 +25,6 @@ import { ImageSourceEvent } from 'ol/source/Image';
   providers: [{ provide: SourceComponent, useExisting: forwardRef(() => SourceImageStaticComponent) }],
 })
 export class SourceImageStaticComponent extends SourceComponent implements OnInit, OnChanges {
-  instance: ImageStatic;
-
   @Input()
   projection: ProjectionLike | string;
   @Input()
@@ -48,6 +46,8 @@ export class SourceImageStaticComponent extends SourceComponent implements OnIni
   imageLoadEnd = new EventEmitter<ImageSourceEvent>();
   @Output()
   imageLoadError = new EventEmitter<ImageSourceEvent>();
+
+  instance: ImageStatic;
 
   constructor(@Host() layer: LayerImageComponent) {
     super(layer);

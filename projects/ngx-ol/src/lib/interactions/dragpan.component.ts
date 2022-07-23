@@ -9,12 +9,12 @@ import { Condition } from 'ol/events/condition';
   template: '',
 })
 export class DragPanInteractionComponent implements OnInit, OnDestroy {
-  instance: DragPan;
-
   @Input()
   condition: Condition;
   @Input()
   kinetic: Kinetic;
+
+  instance: DragPan;
 
   constructor(private map: MapComponent) {}
 

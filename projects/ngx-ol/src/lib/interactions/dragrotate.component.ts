@@ -8,12 +8,12 @@ import { Condition } from 'ol/events/condition';
   template: '',
 })
 export class DragRotateInteractionComponent implements OnInit, OnDestroy {
-  instance: DragRotate;
-
   @Input()
   condition: Condition;
   @Input()
   duration: number;
+
+  instance: DragRotate;
 
   constructor(private map: MapComponent) {}
 

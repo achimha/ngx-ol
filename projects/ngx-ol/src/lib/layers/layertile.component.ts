@@ -9,7 +9,6 @@ import { LayerGroupComponent } from './layergroup.component';
   template: ` <ng-content></ng-content> `,
 })
 export class LayerTileComponent extends LayerComponent implements OnInit, OnDestroy, OnChanges {
-
   @Input()
   preload: number;
   @Input()

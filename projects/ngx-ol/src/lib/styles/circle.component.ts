@@ -7,9 +7,6 @@ import { StyleComponent } from './style.component';
   template: ` <ng-content></ng-content> `,
 })
 export class StyleCircleComponent implements AfterContentInit, OnChanges, OnDestroy {
-  public componentType = 'style-circle';
-  public instance: Circle;
-
   @Input()
   fill: Fill;
   @Input()
@@ -18,6 +15,9 @@ export class StyleCircleComponent implements AfterContentInit, OnChanges, OnDest
   snapToPixel: boolean;
   @Input()
   stroke: Stroke;
+
+  public componentType = 'style-circle';
+  public instance: Circle;
 
   constructor(@Host() private host: StyleComponent) {}
 

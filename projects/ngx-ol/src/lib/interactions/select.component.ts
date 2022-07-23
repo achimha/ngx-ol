@@ -15,8 +15,6 @@ import BaseEvent from 'ol/events/Event';
   template: '',
 })
 export class SelectInteractionComponent implements OnInit, OnDestroy {
-  instance: Select;
-
   @Input()
   addCondition?: Condition;
   @Input()
@@ -48,6 +46,8 @@ export class SelectInteractionComponent implements OnInit, OnDestroy {
   propertyChange = new EventEmitter<ObjectEvent>();
   @Output()
   olSelect = new EventEmitter<SelectEvent>();
+
+  instance: Select;
 
   constructor(private map: MapComponent) {}
 

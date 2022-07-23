@@ -13,13 +13,13 @@ import { transform } from 'ol/proj';
   template: ` <div class="aol-collection-coordinates"></div> `,
 })
 export class CollectionCoordinatesComponent implements OnChanges, OnInit {
-  private host: any;
-  private mapSrid = 'EPSG:3857';
-
   @Input()
   coordinates: Coordinate[] | Coordinate[][] | Coordinate[][][];
   @Input()
   srid = 'EPSG:3857';
+
+  private host: any;
+  private mapSrid = 'EPSG:3857';
 
   constructor(
     private map: MapComponent,

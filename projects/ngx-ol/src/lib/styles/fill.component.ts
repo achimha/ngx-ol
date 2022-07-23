@@ -11,12 +11,11 @@ import { ColorLike } from 'ol/colorlike';
   template: ` <div class="aol-style-fill"></div> `,
 })
 export class StyleFillComponent implements OnInit, OnChanges {
-  /* the typings do not have the setters */
-  private host: /*StyleComponent|StyleCircleComponent|StyleTextComponent*/ any;
-  public instance: Fill;
-
   @Input()
   color: Color | ColorLike;
+
+  public instance: Fill;
+  private readonly host: StyleComponent | StyleCircleComponent | StyleTextComponent;
 
   constructor(
     @Optional() styleHost: StyleComponent,
@@ -48,12 +47,11 @@ export class StyleFillComponent implements OnInit, OnChanges {
         this.host.instance.setFill(this.instance);
         break;
       case 'style-circle':
-        this.host.fill = this.instance;
+        (this.host as StyleCircleComponent).fill = this.instance;
         // console.log('setting ol.style.circle instance\'s fill:', this.host);
         break;
       default:
         throw new Error('unknown host type: ' + this.host);
-      // break;
     }
   }
 

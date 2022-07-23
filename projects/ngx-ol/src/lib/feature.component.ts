@@ -7,11 +7,11 @@ import { SourceVectorComponent } from './sources/vector.component';
   template: ` <ng-content></ng-content> `,
 })
 export class FeatureComponent implements OnInit, OnDestroy, OnChanges {
-  public componentType = 'feature';
-  public instance: Feature;
-
   @Input()
   id: string | number | undefined;
+
+  public componentType = 'feature';
+  public instance: Feature;
 
   constructor(private host: SourceVectorComponent) {}
 
