@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { SourceUTFGridComponent, ViewComponent } from 'ngx-ol';
+import { Coordinate } from 'ol/coordinate';
 
 @Component({
   selector: 'app-root',
@@ -43,7 +44,7 @@ export class UTFGridComponent {
   @ViewChild('view', { static: true }) view: ViewComponent;
 
   info: any;
-  coords: Coordinates;
+  coords: Coordinate;
   key = 'pk.eyJ1IjoieWFrb3VzdCIsImEiOiJjanVkc3Y0b2cwNWppM3lwaXd5M3JidHRzIn0.rJmuWPJnuKA9MJ9z5RPKZw';
 
   displayInfo(c) {

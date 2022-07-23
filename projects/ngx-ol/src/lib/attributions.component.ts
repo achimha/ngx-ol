@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, ContentChildren, Host, QueryList } from '@angular/core';
-import { Attribution } from 'ol/control';
 import { SourceComponent } from './sources/source.component';
 import { AttributionComponent } from './attribution.component';
 
