@@ -1,10 +1,16 @@
 # Changelog
 
-### [9.0.2](https://github.com/achimha/ngx-ol/compare/1.0.0-next.20...9.0.2) (2022-07-21)
+## 12.0.2 2022-07-25
+
+### Features
+* Added option inputs to DefaultInteractions and added missing interaction components.
+
+## 12.0.1 2022-07-24
+
+Initial release of ngx-ol which is a rebrand of ngx-openlayers next tree for Openlayers 6 and
+current Angular.
 
 
-
-## [1.0.0-next.20](https://github.com/achimha/ngx-ol/compare/1.0.0-next.19...1.0.0-next.20) (2022-07-19)
 
 <a name="1.0.0-next.19"></a>
 # [1.0.0-next.19](https://github.com/quentin-ol/ngx-openlayers/compare/1.0.0-next.17...1.0.0-next.19) (2021-09-03)

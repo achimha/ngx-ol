@@ -68,6 +68,8 @@ import { DragZoomInteractionComponent } from './lib/interactions/dragzoom.compon
 import { MouseWheelZoomInteractionComponent } from './lib/interactions/mousewheelzoom.component';
 import { PinchZoomInteractionComponent } from './lib/interactions/pinchzoom.component';
 import { DrawInteractionComponent } from './lib/interactions/draw.component';
+import { KeyboardPanInteractionComponent } from './lib/interactions/keyboardpan.component';
+import { KeyboardZoomInteractionComponent } from './lib/interactions/keyboardzoom.component';
 import { SelectInteractionComponent } from './lib/interactions/select.component';
 import { ModifyInteractionComponent } from './lib/interactions/modify.component';
 import { TranslateInteractionComponent } from './lib/interactions/translate.component';
@@ -146,6 +148,8 @@ export {
   MouseWheelZoomInteractionComponent,
   PinchZoomInteractionComponent,
   DrawInteractionComponent,
+  KeyboardPanInteractionComponent,
+  KeyboardZoomInteractionComponent,
   SelectInteractionComponent,
   ModifyInteractionComponent,
   TranslateInteractionComponent,
