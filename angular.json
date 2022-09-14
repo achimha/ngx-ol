@@ -172,7 +172,6 @@
       }
     }
   },
-  "defaultProject": "demo-ngx-ol",
   "cli": {
     "analytics": "a1ba2ba4-fd62-417a-8ca8-785de9590bd6"
   }
