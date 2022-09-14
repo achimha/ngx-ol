@@ -5,6 +5,7 @@ import { Icon } from 'ol/style';
 // import IconAnchorUnits from 'ol/style/IconAnchorUnits';
 // import IconOrigin from 'ol/style/IconOrigin';
 import { StyleComponent } from './style.component';
+import { IconAnchorUnits, IconOrigin } from 'ol/style/Icon';
 
 @Component({
   selector: 'aol-style-icon',
@@ -14,21 +15,21 @@ export class StyleIconComponent implements OnInit, OnChanges {
   @Input()
   anchor: [number, number];
   @Input()
-  anchorXUnits: string; // TODO IconAnchorUnits;
+  anchorXUnits: IconAnchorUnits;
   @Input()
-  anchorYUnits: string; // TODO IconAnchorUnits;
+  anchorYUnits: IconAnchorUnits;
   @Input()
-  anchorOrigin: string; // IconOrigin;
+  anchorOrigin: IconOrigin;
   @Input()
   color: [number, number, number, number];
   @Input()
-  crossOrigin: string; // IconOrigin;
+  crossOrigin: IconOrigin;
   @Input()
   img: HTMLCanvasElement | HTMLImageElement;
   @Input()
   offset: [number, number];
   @Input()
-  offsetOrigin: string; // IconOrigin;
+  offsetOrigin: IconOrigin;
   @Input()
   opacity: number;
   @Input()
